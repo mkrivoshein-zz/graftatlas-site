@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GraftAtlas — Independent guide to hair transplant clinics worldwide</title>
+<meta name="description" content="GraftAtlas is an independent guide to hair transplant clinics worldwide: real quoted prices, who actually performs the surgery, and what to ask before you book. Launching soon.">
+<link rel="canonical" href="https://graftatlas.com/">
+<meta property="og:title" content="GraftAtlas — Independent guide to hair transplant clinics">
+<meta property="og:description" content="Real quoted prices, who actually performs the surgery, and what to ask before you book.">
+<meta property="og:url" content="https://graftatlas.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f6f8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c3553'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23ff5722' stroke-width='2.4'/%3E%3Cpath d='M16 5v22M5 16h22' stroke='%23ffffff' stroke-width='1.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f6f8;
+    --surface: #ffffff;
+    --text: #1c3553;
+    --muted: #5b6b7e;
+    --line: #e3e9ef;
+    --border: #c6ccd4;
+    --accent: #1c3553;
+    --accent-soft: #e3e9ef;
+    --highlight: #ff5722;
+    --highlight-soft: #fff0eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1b2a;
+      --surface: #16263a;
+      --text: #eef2f6;
+      --muted: #a3b1c2;
+      --line: #1d3047;
+      --border: #2e4661;
+      --accent: #c9d7e6;
+      --accent-soft: #22384f;
+      --highlight: #ff7a50;
+      --highlight-soft: #3a2420;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.6 Avenir, "Avenir Next", "Nunito Sans", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: center top;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 16px 64px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 19px; }
+  header svg { width: 28px; height: 28px; }
+  main {
+    margin-top: 12vh;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(28, 53, 83, .06);
+    padding: 40px 32px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--highlight);
+    background: var(--highlight-soft);
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: clamp(32px, 6vw, 46px);
+    line-height: 1.12;
+    letter-spacing: -.015em;
+    margin: 20px 0 16px;
+  }
+  .lead { color: var(--muted); font-size: 18px; margin: 0 0 28px; }
+  ul { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 12px; }
+  li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; }
+  li::before {
+    content: "";
+    width: 10px; height: 10px; margin-top: 8px;
+    border: 2px solid var(--highlight);
+    border-radius: 50%;
+  }
+  .cities { margin: 0 0 28px; }
+  .cities h2 {
+    font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 12px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 6px 12px; font-size: 15px; background: var(--bg);
+  }
+  .chip small { color: var(--muted); font-size: 13px; }
+  .chip.now { border-color: var(--highlight); color: #fff; background: var(--highlight); font-weight: 600; }
+  .chip.now small { color: rgba(255,255,255,.85); }
+  .chip.more { color: var(--muted); border-style: dashed; }
+  .note {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  a { color: var(--accent); }
+  footer { margin-top: auto; padding-top: 40px; font-size: 14px; color: var(--muted); }
+  @media (max-width: 520px) {
+    .wrap { padding-top: 28px; }
+    main { margin-top: 6vh; padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1c3553"/><circle cx="16" cy="16" r="8" fill="none" stroke="#ff5722" stroke-width="2.4"/><path d="M16 5v22M5 16h22" stroke="#ffffff" stroke-width="1.4"/></svg>
+    GraftAtlas
+  </header>
+
+  <main>
+    <span class="tag">Launching soon</span>
+    <h1>An independent guide to hair transplant clinics worldwide</h1>
+    <p class="lead">We're contacting clinics around the world one by one and publishing what they actually tell patients, in one comparable format.</p>
+    <ul>
+      <li><span><strong>Real quoted prices</strong> for the same case, and what the package really includes.</span></li>
+      <li><span><strong>Who performs each step</strong> of the surgery: the doctor or technicians.</span></li>
+      <li><span><strong>How many surgeries</strong> a doctor takes on per day, guarantees, deposits and red flags.</span></li>
+    </ul>
+    <section class="cities">
+      <h2>Cities we're covering</h2>
+      <div class="chips">
+        <span class="chip now">Istanbul <small>· first up</small></span>
+        <span class="chip">Miami</span>
+        <span class="chip">Bangkok</span>
+        <span class="chip">Budapest</span>
+        <span class="chip">Warsaw</span>
+        <span class="chip more">more to follow</span>
+      </div>
+    </section>
+    <p class="note">GraftAtlas is not a clinic and does not give medical advice. In the future we may receive referral fees from some clinics; we'll always disclose this, and it will never change the data we publish.</p>
+  </main>
+
+  <footer>© 2026 GraftAtlas · <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a></footer>
+</div>
+</body>
+</html>
