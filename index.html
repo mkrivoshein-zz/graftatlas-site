@@ -139,6 +139,8 @@
   .city-info[hidden] { display: none; }
   .city-info h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
   .city-info p { margin: 0; }
+  .city-info ul { margin: 8px 0 0; gap: 8px; }
+  .chip.more[aria-pressed="true"] { border-style: solid; color: var(--on-highlight); }
   .note {
     border-top: 1px solid var(--border);
     padding-top: 20px;
@@ -194,7 +196,7 @@
         <button type="button" class="chip" data-city="bangkok" aria-pressed="false" aria-controls="city-bangkok">Bangkok</button>
         <button type="button" class="chip" data-city="budapest" aria-pressed="false" aria-controls="city-budapest">Budapest</button>
         <button type="button" class="chip" data-city="warsaw" aria-pressed="false" aria-controls="city-warsaw">Warsaw</button>
-        <span class="chip more">more to follow</span>
+        <button type="button" class="chip more" data-city="other" aria-pressed="false" aria-controls="city-other">Other destinations</button>
       </div>
       <div class="city-info" id="city-istanbul" hidden>
         <h3>Why Istanbul</h3>
@@ -215,6 +217,15 @@
       <div class="city-info" id="city-warsaw" hidden>
         <h3>Why Warsaw</h3>
         <p>Poland offers EU standards of care at lower prices than Western Europe, and Warsaw clinics see many patients from the UK, Germany and Scandinavia. It is a useful comparison point for people who want to stay inside the EU.</p>
+      </div>
+      <div class="city-info" id="city-other" hidden>
+        <h3>Other destinations</h3>
+        <ul>
+          <li><span><strong>India</strong> (Delhi, Mumbai): some of the lowest prices anywhere and a large pool of experienced surgeons. Quality varies a lot from clinic to clinic.</span></li>
+          <li><span><strong>Mexico</strong> (Tijuana, Cancún, Guadalajara): a short trip for US patients, with prices well below US clinics.</span></li>
+          <li><span><strong>South Korea</strong> (Seoul): known for skilled surgeons and non-shaven techniques, popular with patients across Asia.</span></li>
+          <li><span><strong>Georgia</strong> (Tbilisi): a smaller, fast-growing hub with Turkish-style packages at similar prices.</span></li>
+        </ul>
       </div>
     </section>
     <p class="note">GraftAtlas is not a clinic and does not give medical advice. In the future we may receive referral fees from some clinics; we'll always disclose this, and it will never change the data we publish.</p>
