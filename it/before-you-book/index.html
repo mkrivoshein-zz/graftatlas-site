@@ -41,9 +41,9 @@
 <header class="site-header">
   <a class="brand" href="/it/"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="16" cy="16" r="9" stroke-width="2.4"/><path d="M16 3v26M3 16h26" stroke-width="1.6" stroke-linecap="round"/></svg>GraftAtlas</a>
   <nav aria-label="Main"><a href="/it/istanbul/">Istanbul</a><a href="/it/miami/">Miami</a><a href="/it/bangkok/">Bangkok</a><a href="/it/budapest/">Budapest</a><a href="/it/warsaw/">Varsavia</a><a class="nav-tips" href="/it/before-you-book/" aria-current="page" title="Prima di prenotare"><span class="full">Prima di prenotare</span><span class="short">Consigli!</span></a></nav>
-  <div class="lang-switch" aria-label="Language"><a href="/before-you-book/" hreflang="en" lang="en">EN</a><a href="/ru/before-you-book/" hreflang="ru" lang="ru">RU</a><a href="/de/before-you-book/" hreflang="de" lang="de">DE</a><a href="/fr/before-you-book/" hreflang="fr" lang="fr">FR</a><a href="/it/before-you-book/" hreflang="it" lang="it" aria-current="true">IT</a></div>
+  <details class="lang-switch"><summary aria-label="Language: Italiano"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4.2 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.7 5.2 8S6 12.5 8 14.5"/></svg>IT<span class="caret" aria-hidden="true"></span></summary><ul><li><a href="/before-you-book/" hreflang="en" lang="en"><span class="code">EN</span>English</a></li><li><a href="/ru/before-you-book/" hreflang="ru" lang="ru"><span class="code">RU</span>Русский</a></li><li><a href="/de/before-you-book/" hreflang="de" lang="de"><span class="code">DE</span>Deutsch</a></li><li><a href="/fr/before-you-book/" hreflang="fr" lang="fr"><span class="code">FR</span>Français</a></li><li><a href="/it/before-you-book/" hreflang="it" lang="it" aria-current="true"><span class="code">IT</span>Italiano</a></li></ul></details>
 </header>
-<main class="page narrow">
+<main class="page">
   <p class="crumbs"><a href="/it/">Home</a> / Prima di prenotare</p>
   <h1>Prima di prenotare: a cosa fare attenzione</h1>
   <div class="intro"><p>Abbiamo letto circa 500 recensioni Google delle cliniche per il trapianto di capelli elencate su GraftAtlas, concentrandoci su quelle con voto più basso e su quelle più dettagliate. Gli stessi problemi si ripetono in ogni città. Qui sotto trovi gli schemi ricorrenti e le domande da porre prima di versare un acconto.</p><p>Sono temi ricorrenti nelle recensioni pubbliche, non conclusioni su una singola clinica. Le singole recensioni possono essere sbagliate, di parte o false.</p></div>
@@ -91,6 +91,11 @@
     }
     fit();
     window.addEventListener('resize', fit);
+    const menu = header.querySelector('details.lang-switch');
+    if (menu) {
+      document.addEventListener('click', function (e) { if (!menu.contains(e.target)) menu.open = false; });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
+    }
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   })();
 </script>

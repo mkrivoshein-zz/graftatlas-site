@@ -41,7 +41,7 @@
 <header class="site-header">
   <a class="brand" href="/de/"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="16" cy="16" r="9" stroke-width="2.4"/><path d="M16 3v26M3 16h26" stroke-width="1.6" stroke-linecap="round"/></svg>GraftAtlas</a>
   <nav aria-label="Main"><a href="/de/istanbul/" aria-current="page">Istanbul</a><a href="/de/miami/">Miami</a><a href="/de/bangkok/">Bangkok</a><a href="/de/budapest/">Budapest</a><a href="/de/warsaw/">Warschau</a><a class="nav-tips" href="/de/before-you-book/" title="Vor der Buchung"><span class="full">Vor der Buchung</span><span class="short">Tipps!</span></a></nav>
-  <div class="lang-switch" aria-label="Language"><a href="/istanbul/" hreflang="en" lang="en">EN</a><a href="/ru/istanbul/" hreflang="ru" lang="ru">RU</a><a href="/de/istanbul/" hreflang="de" lang="de" aria-current="true">DE</a><a href="/fr/istanbul/" hreflang="fr" lang="fr">FR</a><a href="/it/istanbul/" hreflang="it" lang="it">IT</a></div>
+  <details class="lang-switch"><summary aria-label="Language: Deutsch"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4.2 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.7 5.2 8S6 12.5 8 14.5"/></svg>DE<span class="caret" aria-hidden="true"></span></summary><ul><li><a href="/istanbul/" hreflang="en" lang="en"><span class="code">EN</span>English</a></li><li><a href="/ru/istanbul/" hreflang="ru" lang="ru"><span class="code">RU</span>Русский</a></li><li><a href="/de/istanbul/" hreflang="de" lang="de" aria-current="true"><span class="code">DE</span>Deutsch</a></li><li><a href="/fr/istanbul/" hreflang="fr" lang="fr"><span class="code">FR</span>Français</a></li><li><a href="/it/istanbul/" hreflang="it" lang="it"><span class="code">IT</span>Italiano</a></li></ul></details>
 </header>
 <main class="page">
   <p class="crumbs"><a href="/de/">Startseite</a> / Istanbul</p>
@@ -734,6 +734,11 @@
     }
     fit();
     window.addEventListener('resize', fit);
+    const menu = header.querySelector('details.lang-switch');
+    if (menu) {
+      document.addEventListener('click', function (e) { if (!menu.contains(e.target)) menu.open = false; });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
+    }
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   })();
 </script>
