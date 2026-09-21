@@ -25,8 +25,9 @@
     --border: #c6ccd4;
     --accent: #1c3553;
     --accent-soft: #e3e9ef;
-    --highlight: #ff5722;
-    --highlight-soft: #fff0eb;
+    --highlight: #1e4976;
+    --highlight-soft: #e6edf5;
+    --on-highlight: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -38,8 +39,9 @@
       --border: #2e4661;
       --accent: #c9d7e6;
       --accent-soft: #22384f;
-      --highlight: #ff7a50;
-      --highlight-soft: #3a2420;
+      --highlight: #9dbbe0;
+      --highlight-soft: #1f3550;
+      --on-highlight: #0f1b2a;
     }
   }
   * { box-sizing: border-box; }
@@ -111,8 +113,8 @@
     padding: 6px 12px; font-size: 15px; background: var(--bg);
   }
   .chip small { color: var(--muted); font-size: 13px; }
-  .chip.now { border-color: var(--highlight); color: #fff; background: var(--highlight); font-weight: 600; }
-  .chip.now small { color: rgba(255,255,255,.85); }
+  .chip.now { border-color: var(--highlight); color: var(--on-highlight); background: var(--highlight); font-weight: 600; }
+  .chip.now small { color: var(--on-highlight); opacity: .8; }
   .chip.more { color: var(--muted); border-style: dashed; }
   .note {
     border-top: 1px solid var(--border);
