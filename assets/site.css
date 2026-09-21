@@ -151,3 +151,21 @@ a.site { word-break: break-all; }
   .site-header { padding-top: 20px; }
   .page { margin: 16px 8px 0; padding: 24px 16px; }
 }
+
+/* Language switcher */
+.lang-switch { display: flex; gap: 2px; font-size: 13px; font-weight: 700; }
+.lang-switch a { color: var(--muted); text-decoration: none; padding: 3px 7px; border-radius: 999px; border: 1px solid transparent; }
+.lang-switch a:hover { color: var(--text); border-color: var(--border); }
+.lang-switch a[aria-current="true"] { color: var(--on-highlight); background: var(--highlight); }
+
+/* One-line header: brand · menu · language switcher (far right). */
+.site-header { flex-wrap: nowrap; justify-content: flex-start; }
+.site-header nav { margin-left: auto; flex-wrap: nowrap; white-space: nowrap; }
+.site-header .lang-switch { flex: none; }
+.nav-tips .short { display: none; }
+.site-header.compact .nav-tips .full { display: none; }
+.site-header.compact .nav-tips .short { display: inline; }
+/* Still too wide even with the short label: menu moves to its own line below brand + switcher. */
+.site-header.stacked { flex-wrap: wrap; }
+.site-header.stacked nav { order: 3; width: 100%; margin-left: 0; flex-wrap: wrap; white-space: normal; }
+.site-header.stacked .lang-switch { margin-left: auto; }
