@@ -301,6 +301,56 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/warsaw/"/>
   </url>
   <url>
+    <loc>https://graftatlas.com/georgia/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/georgia/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/ru/georgia/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/georgia/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/de/georgia/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/georgia/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/fr/georgia/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/georgia/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/it/georgia/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/georgia/"/>
+  </url>
+  <url>
     <loc>https://graftatlas.com/before-you-book/</loc>
     <lastmod>2026-09-21</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/before-you-book/"/>
