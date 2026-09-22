@@ -192,7 +192,7 @@
 <div class="wrap">
   <header class="site-header">
     <a class="brand" href="/fr/"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="16" cy="16" r="9" stroke-width="2.4"/><path d="M16 3v26M3 16h26" stroke-width="1.6" stroke-linecap="round"/></svg>GraftAtlas</a>
-    <nav aria-label="Main"><a href="/fr/istanbul/">Istanbul</a><a href="/fr/miami/">Miami</a><a href="/fr/bangkok/">Bangkok</a><a href="/fr/budapest/">Budapest</a><a href="/fr/warsaw/">Varsovie</a><a href="/fr/georgia/">Géorgie</a><a href="/fr/tijuana/">Tijuana</a><a class="nav-tips" href="/fr/before-you-book/" title="Avant de réserver"><span class="full">Avant de réserver</span><span class="short">Conseils !</span></a></nav>
+    <nav aria-label="Main"><a href="/fr/istanbul/">Istanbul</a><a href="/fr/miami/">Miami</a><a href="/fr/bangkok/">Bangkok</a><a href="/fr/budapest/">Budapest</a><a href="/fr/warsaw/">Varsovie</a><a href="/fr/georgia/">Géorgie</a><a href="/fr/tijuana/">Tijuana</a><a href="/fr/mexico-city/">Mexico</a><a class="nav-tips" href="/fr/before-you-book/" title="Avant de réserver"><span class="full">Avant de réserver</span><span class="short">Conseils !</span></a></nav>
     <div class="lang-switch" aria-label="Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ru/" hreflang="ru" lang="ru">RU</a><a href="/de/" hreflang="de" lang="de">DE</a><a href="/fr/" hreflang="fr" lang="fr" aria-current="true">FR</a><a href="/it/" hreflang="it" lang="it">IT</a></div>
   </header>
 
@@ -215,6 +215,7 @@
         <button type="button" class="chip" data-city="warsaw" aria-pressed="false" aria-controls="city-warsaw">Varsovie</button>
         <button type="button" class="chip" data-city="georgia" aria-pressed="false" aria-controls="city-georgia">Géorgie</button>
         <button type="button" class="chip" data-city="tijuana" aria-pressed="false" aria-controls="city-tijuana">Tijuana</button>
+        <button type="button" class="chip" data-city="mexico-city" aria-pressed="false" aria-controls="city-mexico-city">Mexico</button>
         <button type="button" class="chip more" data-city="other" aria-pressed="false" aria-controls="city-other">Autres destinations</button>
       </div>
       <div class="city-info" id="city-istanbul" hidden>
@@ -251,6 +252,11 @@
         <h3>Pourquoi Tijuana <span class="fi fi-mx" role="img" aria-label="Mexico"></span></h3>
         <p>Tijuana est le principal pôle mexicain du tourisme de la greffe de cheveux, juste de l'autre côté de la frontière avec San Diego. Les cliniques visent les patients américains : personnel anglophone, accueil à l'aéroport ou à la frontière et prix bien inférieurs aux États-Unis. Mexico et Guadalajara comptent aussi de nombreuses cliniques, surtout pour une patientèle locale.</p>
         <a class="more-link" href="/fr/tijuana/">Voir les 21 établissements à Tijuana →</a>
+      </div>
+      <div class="city-info" id="city-mexico-city" hidden>
+        <h3>Pourquoi Mexico <span class="fi fi-mx" role="img" aria-label="Mexico"></span></h3>
+        <p>Mexico est le premier marché de la greffe de cheveux au Mexique : la plupart des patients sont locaux, mais de plus en plus viennent des États-Unis. On y trouve des cliniques dirigées par un chirurgien et des chaînes nationales qui vendent aussi des traitements non chirurgicaux. Les prix sont bien inférieurs aux États-Unis, et plusieurs cliniques ont des médecins anglophones.</p>
+        <a class="more-link" href="/fr/mexico-city/">Voir les 28 établissements à Mexico →</a>
       </div>
       <div class="city-info" id="city-other" hidden>
         <h3>Autres destinations</h3>
@@ -300,8 +306,13 @@
         <span class="label" aria-hidden="true">Tijuana</span>
         <div class="tip" id="tip-tijuana" role="tooltip"><strong>Tijuana <span class="fi fi-mx"></span></strong><a class="map-link" href="/fr/tijuana/" data-city="tijuana">21 établissements →</a></div>
       </div>
+      <div class="pin left" style="left:22.95%;top:42.29%">
+        <button type="button" class="dot" aria-label="Mexico" aria-describedby="tip-mexico-city"></button>
+        <span class="label" aria-hidden="true">Mexico</span>
+        <div class="tip" id="tip-mexico-city" role="tooltip"><strong>Mexico <span class="fi fi-mx"></span></strong><a class="map-link" href="/fr/mexico-city/" data-city="mexico-city">28 établissements →</a></div>
       </div>
-      <p class="map-list"><a class="map-link" href="/fr/istanbul/" data-city="istanbul">Istanbul (60)</a> · <a class="map-link" href="/fr/miami/" data-city="miami">Miami (32)</a> · <a class="map-link" href="/fr/bangkok/" data-city="bangkok">Bangkok (36)</a> · <a class="map-link" href="/fr/budapest/" data-city="budapest">Budapest (18)</a> · <a class="map-link" href="/fr/warsaw/" data-city="warsaw">Varsovie (26)</a> · <a class="map-link" href="/fr/georgia/" data-city="georgia">Géorgie (11)</a> · <a class="map-link" href="/fr/tijuana/" data-city="tijuana">Tijuana (21)</a></p>
+      </div>
+      <p class="map-list"><a class="map-link" href="/fr/istanbul/" data-city="istanbul">Istanbul (60)</a> · <a class="map-link" href="/fr/miami/" data-city="miami">Miami (32)</a> · <a class="map-link" href="/fr/bangkok/" data-city="bangkok">Bangkok (36)</a> · <a class="map-link" href="/fr/budapest/" data-city="budapest">Budapest (18)</a> · <a class="map-link" href="/fr/warsaw/" data-city="warsaw">Varsovie (26)</a> · <a class="map-link" href="/fr/georgia/" data-city="georgia">Géorgie (11)</a> · <a class="map-link" href="/fr/tijuana/" data-city="tijuana">Tijuana (21)</a> · <a class="map-link" href="/fr/mexico-city/" data-city="mexico-city">Mexico (28)</a></p>
       <script>
         document.querySelector('.world').addEventListener('click', function (ev) {
           const a = ev.target.closest('a.map-link');
