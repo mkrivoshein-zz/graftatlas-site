@@ -153,6 +153,7 @@
   .fi-hu { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-hu%22 viewBox=%220 0 640 480%22%3E %3Cg fill-rule=%22evenodd%22%3E %3Cpath fill=%22%23fff%22 d=%22M640 480H0V0h640z%22/%3E %3Cpath fill=%22%23388d00%22 d=%22M640 480H0V320h640z%22/%3E %3Cpath fill=%22%23d43516%22 d=%22M640 160.1H0V.1h640z%22/%3E %3C/g%3E %3C/svg%3E"); }
   .fi-pl { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 id=%22flag-icons-pl%22 viewBox=%220 0 640 480%22%3E %3Cg fill-rule=%22evenodd%22%3E %3Cpath fill=%22%23fff%22 d=%22M640 480H0V0h640z%22/%3E %3Cpath fill=%22%23dc143c%22 d=%22M640 480H0V240h640z%22/%3E %3C/g%3E %3C/svg%3E"); }
   .fi-ge { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 480%22%3E%3Cpath fill=%22%23fff%22 d=%22M0 0h640v480H0z%22/%3E%3Cpath fill=%22%23e8112d%22 d=%22M272 0h96v480h-96zM0 192h640v96H0zM124 60h24v72h-24zM100 84h72v24h-72zM492 60h24v72h-24zM468 84h72v24h-72zM124 348h24v72h-24zM100 372h72v24h-72zM492 348h24v72h-24zM468 372h72v24h-72z%22/%3E%3C/svg%3E"); }
+  .fi-mx { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 480%22%3E%3Cpath fill=%22%23006847%22 d=%22M0 0h214v480H0z%22/%3E%3Cpath fill=%22%23fff%22 d=%22M214 0h212v480H214z%22/%3E%3Cpath fill=%22%23ce1126%22 d=%22M426 0h214v480H426z%22/%3E%3Ccircle cx=%22320%22 cy=%22240%22 r=%2256%22 fill=%22%238c5a2b%22/%3E%3Cpath fill=%22%23006847%22 d=%22M268 262q52 40 104 0v14q-52 40-104 0z%22/%3E%3C/svg%3E"); }
   .city-info h3 .fi { margin-left: 4px; border-radius: 2px; box-shadow: 0 0 0 1px var(--border); }
   .city-info ul { margin: 8px 0 0; gap: 8px; }
   .chip.more[aria-pressed="true"] { border-style: solid; color: var(--on-highlight); }
@@ -191,7 +192,7 @@
 <div class="wrap">
   <header class="site-header">
     <a class="brand" href="/it/"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="16" cy="16" r="9" stroke-width="2.4"/><path d="M16 3v26M3 16h26" stroke-width="1.6" stroke-linecap="round"/></svg>GraftAtlas</a>
-    <nav aria-label="Main"><a href="/it/istanbul/">Istanbul</a><a href="/it/miami/">Miami</a><a href="/it/bangkok/">Bangkok</a><a href="/it/budapest/">Budapest</a><a href="/it/warsaw/">Varsavia</a><a href="/it/georgia/">Georgia</a><a class="nav-tips" href="/it/before-you-book/" title="Prima di prenotare"><span class="full">Prima di prenotare</span><span class="short">Consigli!</span></a></nav>
+    <nav aria-label="Main"><a href="/it/istanbul/">Istanbul</a><a href="/it/miami/">Miami</a><a href="/it/bangkok/">Bangkok</a><a href="/it/budapest/">Budapest</a><a href="/it/warsaw/">Varsavia</a><a href="/it/georgia/">Georgia</a><a href="/it/tijuana/">Tijuana</a><a class="nav-tips" href="/it/before-you-book/" title="Prima di prenotare"><span class="full">Prima di prenotare</span><span class="short">Consigli!</span></a></nav>
     <div class="lang-switch" aria-label="Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ru/" hreflang="ru" lang="ru">RU</a><a href="/de/" hreflang="de" lang="de">DE</a><a href="/fr/" hreflang="fr" lang="fr">FR</a><a href="/it/" hreflang="it" lang="it" aria-current="true">IT</a></div>
   </header>
 
@@ -213,6 +214,7 @@
         <button type="button" class="chip" data-city="budapest" aria-pressed="false" aria-controls="city-budapest">Budapest</button>
         <button type="button" class="chip" data-city="warsaw" aria-pressed="false" aria-controls="city-warsaw">Varsavia</button>
         <button type="button" class="chip" data-city="georgia" aria-pressed="false" aria-controls="city-georgia">Georgia</button>
+        <button type="button" class="chip" data-city="tijuana" aria-pressed="false" aria-controls="city-tijuana">Tijuana</button>
         <button type="button" class="chip more" data-city="other" aria-pressed="false" aria-controls="city-other">Altre destinazioni</button>
       </div>
       <div class="city-info" id="city-istanbul" hidden>
@@ -245,11 +247,15 @@
         <p>La Georgia è un polo più piccolo e in rapida crescita, con pacchetti in stile turco a prezzi simili. A Tbilisi operano alcune delle cliniche più longeve della regione e noti centri di formazione per chirurghi, mentre a Batumi, sul Mar Nero, aprono cliniche per pazienti turchi e mediorientali.</p>
         <a class="more-link" href="/it/georgia/">Vedi tutte le 15 strutture in Georgia →</a>
       </div>
+      <div class="city-info" id="city-tijuana" hidden>
+        <h3>Perché Tijuana <span class="fi fi-mx" role="img" aria-label="Mexico"></span></h3>
+        <p>Tijuana è il principale polo messicano del turismo per il trapianto di capelli, proprio oltre il confine con San Diego. Le cliniche puntano ai pazienti statunitensi: personale che parla inglese, accoglienza in aeroporto o al confine e prezzi ben al di sotto di quelli USA. Anche Città del Messico e Guadalajara hanno molte cliniche, soprattutto per pazienti locali.</p>
+        <a class="more-link" href="/it/tijuana/">Vedi tutte le 22 strutture a Tijuana →</a>
+      </div>
       <div class="city-info" id="city-other" hidden>
         <h3>Altre destinazioni</h3>
         <ul>
           <li><span><strong>India</strong> (Delhi, Mumbai): tra i prezzi più bassi al mondo e molti chirurghi esperti. La qualità varia molto da clinica a clinica.</span></li>
-          <li><span><strong>Messico</strong> (Tijuana, Cancún, Guadalajara): un breve viaggio per i pazienti statunitensi, con prezzi ben al di sotto delle cliniche USA.</span></li>
           <li><span><strong>Corea del Sud</strong> (Seul): nota per chirurghi abili e tecniche senza rasatura, apprezzata in tutta l’Asia.</span></li>
         </ul>
       </div>
@@ -289,8 +295,13 @@
         <span class="label" aria-hidden="true">Georgia</span>
         <div class="tip" id="tip-georgia" role="tooltip"><strong>Georgia <span class="fi fi-ge"></span></strong><a class="map-link" href="/it/georgia/" data-city="georgia">15 strutture →</a></div>
       </div>
+      <div class="pin" style="left:19.13%;top:32.18%">
+        <button type="button" class="dot" aria-label="Tijuana" aria-describedby="tip-tijuana"></button>
+        <span class="label" aria-hidden="true">Tijuana</span>
+        <div class="tip" id="tip-tijuana" role="tooltip"><strong>Tijuana <span class="fi fi-mx"></span></strong><a class="map-link" href="/it/tijuana/" data-city="tijuana">22 strutture →</a></div>
       </div>
-      <p class="map-list"><a class="map-link" href="/it/istanbul/" data-city="istanbul">Istanbul (62)</a> · <a class="map-link" href="/it/miami/" data-city="miami">Miami (34)</a> · <a class="map-link" href="/it/bangkok/" data-city="bangkok">Bangkok (39)</a> · <a class="map-link" href="/it/budapest/" data-city="budapest">Budapest (18)</a> · <a class="map-link" href="/it/warsaw/" data-city="warsaw">Varsavia (30)</a> · <a class="map-link" href="/it/georgia/" data-city="georgia">Georgia (15)</a></p>
+      </div>
+      <p class="map-list"><a class="map-link" href="/it/istanbul/" data-city="istanbul">Istanbul (62)</a> · <a class="map-link" href="/it/miami/" data-city="miami">Miami (34)</a> · <a class="map-link" href="/it/bangkok/" data-city="bangkok">Bangkok (39)</a> · <a class="map-link" href="/it/budapest/" data-city="budapest">Budapest (18)</a> · <a class="map-link" href="/it/warsaw/" data-city="warsaw">Varsavia (30)</a> · <a class="map-link" href="/it/georgia/" data-city="georgia">Georgia (15)</a> · <a class="map-link" href="/it/tijuana/" data-city="tijuana">Tijuana (22)</a></p>
       <script>
         document.querySelector('.world').addEventListener('click', function (ev) {
           const a = ev.target.closest('a.map-link');
