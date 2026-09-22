@@ -168,3 +168,57 @@ a.site { word-break: break-all; }
 .site-header.stacked { flex-wrap: wrap; }
 .site-header.stacked nav { order: 3; width: 100%; margin-left: 0; flex-wrap: wrap; white-space: normal; }
 .site-header.stacked .lang-switch { margin-left: auto; }
+
+/* Homepage world map */
+.world { margin: 0 0 28px; }
+.world h2 {
+  font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 4px;
+}
+.world .hint { margin: 0 0 16px; font-size: 15px; color: var(--muted); }
+.map { position: relative; }
+.map svg { display: block; width: 100%; height: auto; }
+.map svg path { fill: var(--accent-soft); stroke: var(--surface); stroke-width: .6; }
+.pin { position: absolute; width: 0; height: 0; z-index: 1; }
+.pin:hover, .pin:focus-within { z-index: 3; }
+.pin .dot {
+  position: absolute; left: -9px; top: -9px; width: 18px; height: 18px;
+  padding: 0; border: 0; background: transparent; cursor: pointer;
+}
+.pin .dot::before {
+  content: ""; position: absolute; inset: 3px; border-radius: 50%;
+  background: var(--highlight); box-shadow: 0 0 0 2px var(--surface), 0 0 0 6px color-mix(in srgb, var(--highlight) 18%, transparent);
+  transition: transform .15s;
+}
+.pin:hover .dot::before, .pin:focus-within .dot::before { transform: scale(1.25); }
+.pin .dot:focus-visible { outline: 2px solid var(--highlight); outline-offset: 2px; border-radius: 50%; }
+.pin .label {
+  position: absolute; left: 10px; top: -9px; white-space: nowrap; pointer-events: none;
+  font-size: 13px; font-weight: 600; line-height: 18px; color: var(--text);
+  text-shadow: 0 0 3px var(--surface), 0 0 3px var(--surface);
+}
+.pin.left .label { left: auto; right: 10px; }
+.pin .tip {
+  position: absolute; left: 0; bottom: 6px; transform: translateX(-50%);
+  padding-bottom: 8px; visibility: hidden; opacity: 0; transition: opacity .12s;
+}
+.pin .tip strong, .pin .tip a { display: block; white-space: nowrap; }
+.pin .tip strong {
+  background: var(--surface); border: 1px solid var(--border); border-bottom: 0; border-radius: 6px 6px 0 0;
+  padding: 8px 14px 2px; font-size: 14px;
+}
+.pin .tip strong .fi { margin-left: 4px; border-radius: 2px; box-shadow: 0 0 0 1px var(--border); }
+.pin .tip a {
+  background: var(--surface); border: 1px solid var(--border); border-top: 0; border-radius: 0 0 6px 6px;
+  padding: 0 14px 8px; font-size: 18px; font-weight: 700; color: var(--highlight); text-decoration: none;
+  box-shadow: 0 6px 14px rgba(28, 53, 83, .12);
+}
+.pin .tip a:hover { text-decoration: underline; }
+.pin:hover .tip, .pin:focus-within .tip { visibility: visible; opacity: 1; }
+@media (max-width: 600px) {
+  .pin .label { display: none; }
+}
+.map-list { display: none; margin: 12px 0 0; font-size: 15px; }
+@media (max-width: 600px) {
+  .map-list { display: block; }
+}
