@@ -31,7 +31,7 @@
     if (d > 4000) h += Math.floor(d / 6000);   // a stop on the long ones
     var hh = Math.floor(h), mm = Math.round((h - hh) * 60 / 15) * 15;
     if (mm === 60) { hh += 1; mm = 0; }
-    return hh + ' h' + (mm ? ' ' + mm + ' m' : '');
+    return hh + ' ' + TXT.unit_h + (mm ? ' ' + mm + ' ' + TXT.unit_m : '');
   }
 
   function money(v) {
@@ -82,7 +82,7 @@
     tbody.innerHTML = state.rows.map(function (r) {
       return '<tr>' +
         '<td><strong>' + CALC.names[r.slug] + '</strong></td>' +
-        '<td>' + Math.round(r.km / 50) * 50 + ' km<span class="addr">' +
+        '<td>' + Math.round(r.km / 50) * 50 + ' ' + TXT.unit_km + '<span class="addr">' +
           TXT.flight_time.replace('{h}', r.flightHours) + '</span></td>' +
         '<td>' + range(r.surgery[0], r.surgery[1]) + '</td>' +
         '<td>' + range(r.flight[0], r.flight[1]) + '</td>' +

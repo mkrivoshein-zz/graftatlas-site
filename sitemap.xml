@@ -754,6 +754,50 @@
     <loc>https://graftatlas.com/cost-calculator/</loc>
     <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/ru/cost-calculator/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/de/cost-calculator/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/fr/cost-calculator/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/it/cost-calculator/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/"/>
   </url>
 </urlset>
