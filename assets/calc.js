@@ -64,12 +64,22 @@
     };
   }
 
-  function render() {
-    if (!state.origin || !state.stage) { wrap.hidden = true; empty.hidden = false; lead.hidden = true; return; }
-    var rows = Object.keys(CALC.dest).map(function (slug) { return estimate(slug, CALC.dest[slug]); });
-    rows.sort(function (a, b) { return a.total[0] - b.total[0]; });
-    state.rows = rows;
-    tbody.innerHTML = rows.map(function (r) {
+  var gate = document.getElementById('gate');
+  var resultStep = document.getElementById('result-step');
+  var doneNote = document.getElementById('done-note');
+
+  function decided() {
+    try { return localStorage.getItem('calc-lead') || ''; } catch (e) { return ''; }
+  }
+
+  function rows() {
+    var list = Object.keys(CALC.dest).map(function (slug) { return estimate(slug, CALC.dest[slug]); });
+    list.sort(function (a, b) { return a.total[0] - b.total[0]; });
+    return list;
+  }
+
+  function fillTable() {
+    tbody.innerHTML = state.rows.map(function (r) {
       return '<tr>' +
         '<td><strong>' + CALC.names[r.slug] + '</strong></td>' +
         '<td>' + Math.round(r.km / 50) * 50 + ' km<span class="addr">' +
@@ -80,12 +90,39 @@
           (r.hotel[1] ? '<span class="addr">' + TXT.nights.replace('{n}', CALC.nights) + '</span>' : '') + '</td>' +
         '<td>' + range(r.extras[0], r.extras[1]) + '</td>' +
         '<td class="total"><strong>' + range(r.total[0], r.total[1]) + '</strong></td>' +
-        '<td><a class="more-link" href="' + CALC.prefix + '/' + r.slug + '/">' + TXT.see_clinics + ' →</a></td>' +
+        '<td><a class="more-link" href="' + CALC.prefix + '/' + r.slug + '/">' + TXT.see_clinics + ' \u2192</a></td>' +
         '</tr>';
     }).join('');
-    wrap.hidden = false;
+  }
+
+  function render() {
+    var ready = state.origin && state.stage;
+    if (!ready) {                                   // nothing to show yet
+      gate.hidden = true;
+      resultStep.hidden = true;
+      empty.hidden = false;
+      return;
+    }
+    state.rows = rows();
     empty.hidden = true;
-    lead.hidden = false;
+    if (state.shown || decided()) {                 // already answered the question once
+      state.shown = true;
+      gate.hidden = true;
+      resultStep.hidden = false;
+      fillTable();
+      return;
+    }
+    gate.hidden = false;                            // ask before showing the numbers
+    resultStep.hidden = true;
+  }
+
+  function reveal(note) {
+    state.shown = true;
+    doneNote.textContent = note || '';
+    gate.hidden = true;
+    resultStep.hidden = false;
+    fillTable();
+    resultStep.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function countryName() {
@@ -103,7 +140,6 @@
     citySel.innerHTML = '<option value="">' + citySel.options[0].textContent + '</option>' +
       list.map(function (a) { return '<option value="' + (a.code || a.city) + '">' + a.city + '</option>'; }).join('');
     citySel.disabled = !list.length;
-    citySel.hidden = false;
     state.origin = null;
     if (list.length === 1) { citySel.value = list[0].code || list[0].city; onCity(); return; }
     render();
@@ -153,10 +189,9 @@
 
   var form = document.getElementById('lead-form');
   var emailInput = document.getElementById('email');
-  var consentBox = document.getElementById('consent-box');
   var errorBox = document.getElementById('form-error');
-  var sentBox = document.getElementById('sent');
-  var button = form.querySelector('button');
+  var button = form.querySelector('button.submit');
+  var declineButton = document.getElementById('decline');
 
   function showError(msg) {
     errorBox.textContent = msg;
@@ -165,64 +200,60 @@
 
   emailInput.addEventListener('input', function () { showError(''); });
 
-  form.addEventListener('submit', function (ev) {
-    ev.preventDefault();
-    var problem = emailProblem(emailInput.value);
-    if (problem) { showError(problem); emailInput.focus(); return; }
-    if (!consentBox.checked) { showError(TXT.err_consent); return; }
-
+  function save(email) {
     var best = state.rows[0];
     var city = (CALC.origins[countryName()] || []).filter(function (x) { return (x.code || x.city) === citySel.value; })[0];
-    var payload = {
-      email: emailInput.value.trim(),
-      country: countryName(),
-      city: city ? city.city : '',
-      airport: city && city.code ? city.code : '',
-      stage: state.stage,
-      currency: currencySel.value,
-      cheapest: best ? best.slug : '',
-      total_low: best ? Math.round(best.total[0]) : '',
-      total_high: best ? Math.round(best.total[1]) : '',
-      rows: state.rows.map(function (r) {
+    var body = new FormData();                      // a Google Form only accepts its own entry.* fields
+    body.append(FIELDS.email, email);
+    body.append(FIELDS.country, countryName());
+    body.append(FIELDS.city, (city ? city.city : '') + (city && city.code ? ' (' + city.code + ')' : ''));
+    body.append(FIELDS.details, [
+      'stage: Norwood ' + state.stage,
+      'currency: ' + currencySel.value,
+      'cheapest: ' + (best ? best.slug + ' ' + Math.round(best.total[0]) + '-' + Math.round(best.total[1]) : ''),
+      'all: ' + state.rows.map(function (r) {
         return r.slug + ':' + Math.round(r.total[0]) + '-' + Math.round(r.total[1]);
       }).join(', '),
-      language: LANG,
-      referrer: document.referrer || '',
-      page: location.href
-    };
+      'wants email: ' + (email ? 'yes' : 'no'),
+      'language: ' + LANG,
+      'page: ' + location.href,
+      'referrer: ' + (document.referrer || '')
+    ].join('\n'));
 
-    if (!ENDPOINT) { showError(TXT.err_send); return; }   // build published without the leads endpoint
+    try { localStorage.setItem('calc-lead', email ? 'yes' : 'no'); } catch (e) {}
+    return fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: body });
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (!ENDPOINT) { showError(TXT.err_send); return; }
+    var problem = emailProblem(emailInput.value);
+    if (problem) { showError(problem); emailInput.focus(); return; }
 
     button.disabled = true;
+    declineButton.disabled = true;
     button.textContent = TXT.sending;
     showError('');
 
-    var body = new FormData();               // a Google Form only accepts its own entry.* fields
-    body.append(FIELDS.email, payload.email);
-    body.append(FIELDS.country, payload.country);
-    body.append(FIELDS.city, payload.city + ' (' + payload.airport + ')');
-    body.append(FIELDS.details, [
-      'stage: Norwood ' + payload.stage,
-      'currency: ' + payload.currency,
-      'cheapest: ' + payload.cheapest + ' ' + payload.total_low + '-' + payload.total_high,
-      'all: ' + payload.rows,
-      'language: ' + payload.language,
-      'page: ' + payload.page,
-      'referrer: ' + payload.referrer
-    ].join('\n'));
-
-    fetch(ENDPOINT, {
-      method: 'POST',
-      mode: 'no-cors',                       // Google Forms sends no CORS headers; the response is opaque
-      body: body
-    }).then(function () {
-      form.hidden = true;
-      sentBox.hidden = false;
-      if (window.gtag) gtag('event', 'calc_lead', { city: payload.cheapest, country: payload.country, language: LANG });
+    save(emailInput.value.trim()).then(function () {
+      if (window.gtag) gtag('event', 'calc_lead', { city: state.rows[0].slug, country: countryName(), language: LANG });
+      reveal(TXT.sent_note);
     }).catch(function () {
       button.disabled = false;
+      declineButton.disabled = false;
       button.textContent = TXT.send;
       showError(TXT.err_send);
     });
   });
+
+  declineButton.addEventListener('click', function () {
+    declineButton.disabled = true;
+    save('').then(function () {
+      if (window.gtag) gtag('event', 'calc_lead_declined', { country: countryName(), language: LANG });
+      reveal(TXT.declined_note);
+    }).catch(function () {
+      reveal(TXT.declined_note);                    // never hold the numbers hostage to a failed request
+    });
+  });
+
 })();
