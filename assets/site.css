@@ -292,3 +292,25 @@ a.site { word-break: break-all; }
 }
 .submit[disabled] { opacity: .6; cursor: default; }
 .sent h3 { margin: 0 0 6px; }
+
+/* Calculator banner under the homepage map */
+.calc-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  margin: 20px 0 0; padding: 18px 24px; text-decoration: none; color: var(--on-highlight);
+  background: linear-gradient(105deg, var(--highlight), color-mix(in srgb, var(--highlight) 70%, var(--text)));
+  border-radius: 8px; box-shadow: 0 2px 12px rgba(28, 53, 83, .12);
+}
+.calc-banner:hover { filter: brightness(1.08); }
+.calc-banner:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.calc-banner-text { display: grid; gap: 2px; }
+.calc-banner-text strong { font-size: 19px; }
+.calc-banner-text span { font-size: 15px; opacity: .85; }
+.calc-banner-cta {
+  flex: none; font-weight: 700; font-size: 15px; padding: 9px 18px; border-radius: 999px;
+  border: 1px solid var(--on-highlight);
+}
+.nav-calc { font-weight: 700; }
+@media (max-width: 520px) {
+  .calc-banner { padding: 16px 18px; }
+  .calc-banner-cta { width: 100%; text-align: center; }
+}
