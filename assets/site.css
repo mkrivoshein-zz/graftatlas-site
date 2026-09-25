@@ -279,6 +279,7 @@ a.site { word-break: break-all; }
 .warn p { margin: 0; }
 .lead { border-top: 1px solid var(--border); padding-top: 24px; }
 .lead form { display: grid; gap: 12px; max-width: 560px; }
+.lead form[hidden], .calc [hidden] { display: none; }   /* the hidden attribute must beat display:grid/flex */
 .email-label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: var(--muted); }
 .check { display: grid; grid-template-columns: 20px 1fr; gap: 8px; font-size: 14px; color: var(--muted); align-items: start; }
 .check input { margin-top: 3px; }
