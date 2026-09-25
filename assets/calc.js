@@ -72,10 +72,26 @@
     try { return localStorage.getItem('calc-lead') || ''; } catch (e) { return ''; }
   }
 
+  var sort = { key: 'km', dir: 1 };          // nearest city on top until the visitor sorts otherwise
+
+  function sortValue(r, key) {
+    if (key === 'city') return CALC.names[r.slug].toLowerCase();
+    if (key === 'km') return r.km;
+    return r[key][0];                       // surgery, flight, hotel, extras, total: compare the low end
+  }
+
   function rows() {
     var list = Object.keys(CALC.dest).map(function (slug) { return estimate(slug, CALC.dest[slug]); });
-    list.sort(function (a, b) { return a.total[0] - b.total[0]; });
-    return list;
+    return sortRows(list);
+  }
+
+  function sortRows(list) {
+    return list.sort(function (a, b) {
+      var x = sortValue(a, sort.key), y = sortValue(b, sort.key);
+      if (x < y) return -sort.dir;
+      if (x > y) return sort.dir;
+      return 0;
+    });
   }
 
   function fillTable() {
@@ -115,6 +131,20 @@
     gate.hidden = false;                            // ask before showing the numbers
     resultStep.hidden = true;
   }
+
+  Array.prototype.forEach.call(document.querySelectorAll('#result th[data-key]'), function (th) {
+    th.querySelector('button').addEventListener('click', function () {
+      var key = th.dataset.key;
+      sort = { key: key, dir: sort.key === key ? -sort.dir : 1 };
+      Array.prototype.forEach.call(document.querySelectorAll('#result th[data-key]'), function (other) {
+        if (other === th) other.setAttribute('aria-sort', sort.dir === 1 ? 'ascending' : 'descending');
+        else other.removeAttribute('aria-sort');
+      });
+      state.rows = sortRows(state.rows);
+      fillTable();
+      if (window.gtag) gtag('event', 'calc_sort', { column: key, language: LANG });
+    });
+  });
 
   function reveal(note) {
     state.shown = true;

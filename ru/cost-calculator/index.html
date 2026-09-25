@@ -11,6 +11,7 @@
 <link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/">
 <link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/">
 <link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/">
+<link rel="alternate" hreflang="es" href="https://graftatlas.com/es/cost-calculator/">
 <link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/">
 <meta property="og:title" content="Калькулятор стоимости пересадки волос: операция, перелёт и отель | GraftAtlas">
 <meta property="og:description" content="Посчитайте, во сколько вам обойдётся пересадка волос за границей: операция, перелёт из вашего города и отель. Сравнение 12 городов.">
@@ -41,7 +42,7 @@
 <header class="site-header">
   <a class="brand" href="/ru/"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="16" cy="16" r="9" stroke-width="2.4"/><path d="M16 3v26M3 16h26" stroke-width="1.6" stroke-linecap="round"/></svg>GraftAtlas</a>
   <nav aria-label="Main"><a href="/ru/istanbul/">Стамбул</a><a href="/ru/miami/">Майами</a><a href="/ru/bangkok/">Бангкок</a><a href="/ru/budapest/">Будапешт</a><a href="/ru/warsaw/">Варшава</a><a href="/ru/georgia/">Грузия</a><a href="/ru/tijuana/">Тихуана</a><a href="/ru/mexico-city/">Мехико</a><a href="/ru/sao-paulo/">Сан-Паулу</a><a href="/ru/seoul/">Сеул</a><a href="/ru/sydney/">Сидней</a><a href="/ru/delhi/">Дели</a><a class="nav-tips" href="/ru/before-you-book/" title="Перед записью"><span class="full">Перед записью</span><span class="short">Советы!</span></a><a class="nav-calc" href="/ru/cost-calculator/" aria-current="page" title="Калькулятор стоимости">Калькулятор</a></nav>
-  <div class="lang-switch" aria-label="Language"><a href="/cost-calculator/" hreflang="en" lang="en">EN</a><a href="/ru/cost-calculator/" hreflang="ru" lang="ru" aria-current="true">RU</a><a href="/de/cost-calculator/" hreflang="de" lang="de">DE</a><a href="/fr/cost-calculator/" hreflang="fr" lang="fr">FR</a><a href="/it/cost-calculator/" hreflang="it" lang="it">IT</a></div>
+  <div class="lang-switch" aria-label="Language"><a href="/cost-calculator/" hreflang="en" lang="en">EN</a><a href="/ru/cost-calculator/" hreflang="ru" lang="ru" aria-current="true">RU</a><a href="/de/cost-calculator/" hreflang="de" lang="de">DE</a><a href="/fr/cost-calculator/" hreflang="fr" lang="fr">FR</a><a href="/it/cost-calculator/" hreflang="it" lang="it">IT</a><a href="/es/cost-calculator/" hreflang="es" lang="es">ES</a></div>
 </header>
 <main class="page calc">
   <p class="crumbs"><a href="/ru/">Home</a> / Калькулятор стоимости</p>
@@ -82,7 +83,7 @@
       <p class="form-error" id="form-error" hidden></p>
       <div class="gate-buttons">
         <button type="submit" class="submit">Сообщите мне</button>
-        <button type="button" class="decline" id="decline">Показать цифры, не писать мне</button>
+        <button type="button" class="decline" id="decline">Не хочу получать уведомления</button>
       </div>
       <p class="consent-note">Нажимая «Сообщите мне», вы соглашаетесь, что мы сохраним ваш адрес вместе с деталями этого расчёта и напишем вам по этому поводу. Отписаться можно в любой момент. См. <a href="/ru/privacy/">политику конфиденциальности</a>.</p>
     </form>
@@ -94,13 +95,13 @@
     <div class="table-wrap" id="result-wrap">
       <table class="clinics" id="result">
         <thead><tr>
-          <th scope="col">Город</th>
-          <th scope="col">Расстояние</th>
-          <th scope="col">Операция</th>
-          <th scope="col">Перелёт</th>
-          <th scope="col">Отель</th>
-          <th scope="col">Прочее</th>
-          <th scope="col">Итого</th>
+          <th scope="col" data-key="city"><button type="button" title="Сортировать по">Город</button></th>
+          <th scope="col" data-key="km" aria-sort="ascending"><button type="button" title="Сортировать по">Расстояние</button></th>
+          <th scope="col" data-key="surgery"><button type="button" title="Сортировать по">Операция</button></th>
+          <th scope="col" data-key="flight"><button type="button" title="Сортировать по">Перелёт</button></th>
+          <th scope="col" data-key="hotel"><button type="button" title="Сортировать по">Отель</button></th>
+          <th scope="col" data-key="extras"><button type="button" title="Сортировать по">Прочее</button></th>
+          <th scope="col" data-key="total"><button type="button" title="Сортировать по">Итого</button></th>
           <th scope="col"></th>
         </tr></thead>
         <tbody></tbody>
@@ -122,7 +123,7 @@
   const TXT = {"nights": "{n} ночи", "included": "входит в пакет", "flight_time": "около {h}", "see_clinics": "Смотреть клиники", "sending": "Сохраняем...", "send": "Сообщите мне", "err_email": "Это не похоже на адрес почты.", "err_typo": "Вы имели в виду {suggestion}?", "err_disposable": "Укажите адрес, который вы действительно читаете.", "err_send": "Не удалось сохранить. Попробуйте ещё раз или напишите на hello@graftatlas.com.", "sent_note": "Сохранили. Напишем, когда будет о чём сообщить.", "declined_note": "Хорошо, без почты. Цифры ниже.", "unit_km": "км", "unit_h": "ч", "unit_m": "мин"};
   const LANG = "ru";
 </script>
-<script src="/assets/calc.js?v=d1506807"></script>
+<script src="/assets/calc.js?v=3a9b705c"></script>
 <footer class="site-footer">
   <p>GraftAtlas - не клиника и не даёт медицинских рекомендаций. Наличие клиники в списке не означает рекомендацию.</p>
   <p>© 2026 GraftAtlas · <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a> · <a href="/ru/privacy/">Конфиденциальность</a></p>

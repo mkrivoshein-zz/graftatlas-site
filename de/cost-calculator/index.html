@@ -11,6 +11,7 @@
 <link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/">
 <link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/">
 <link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/">
+<link rel="alternate" hreflang="es" href="https://graftatlas.com/es/cost-calculator/">
 <link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/">
 <meta property="og:title" content="Haartransplantation Kostenrechner: OP, Flug und Hotel | GraftAtlas">
 <meta property="og:description" content="Berechnen Sie, was eine Haartransplantation im Ausland wirklich kostet: Operation, Hin- und Rückflug ab Ihrer Stadt und Hotel. 12 Städte im Vergleich.">
@@ -41,7 +42,7 @@
 <header class="site-header">
   <a class="brand" href="/de/"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="16" cy="16" r="9" stroke-width="2.4"/><path d="M16 3v26M3 16h26" stroke-width="1.6" stroke-linecap="round"/></svg>GraftAtlas</a>
   <nav aria-label="Main"><a href="/de/istanbul/">Istanbul</a><a href="/de/miami/">Miami</a><a href="/de/bangkok/">Bangkok</a><a href="/de/budapest/">Budapest</a><a href="/de/warsaw/">Warschau</a><a href="/de/georgia/">Georgien</a><a href="/de/tijuana/">Tijuana</a><a href="/de/mexico-city/">Mexiko-Stadt</a><a href="/de/sao-paulo/">São Paulo</a><a href="/de/seoul/">Seoul</a><a href="/de/sydney/">Sydney</a><a href="/de/delhi/">Delhi</a><a class="nav-tips" href="/de/before-you-book/" title="Vor der Buchung"><span class="full">Vor der Buchung</span><span class="short">Tipps!</span></a><a class="nav-calc" href="/de/cost-calculator/" aria-current="page" title="Kostenrechner">Rechner</a></nav>
-  <div class="lang-switch" aria-label="Language"><a href="/cost-calculator/" hreflang="en" lang="en">EN</a><a href="/ru/cost-calculator/" hreflang="ru" lang="ru">RU</a><a href="/de/cost-calculator/" hreflang="de" lang="de" aria-current="true">DE</a><a href="/fr/cost-calculator/" hreflang="fr" lang="fr">FR</a><a href="/it/cost-calculator/" hreflang="it" lang="it">IT</a></div>
+  <div class="lang-switch" aria-label="Language"><a href="/cost-calculator/" hreflang="en" lang="en">EN</a><a href="/ru/cost-calculator/" hreflang="ru" lang="ru">RU</a><a href="/de/cost-calculator/" hreflang="de" lang="de" aria-current="true">DE</a><a href="/fr/cost-calculator/" hreflang="fr" lang="fr">FR</a><a href="/it/cost-calculator/" hreflang="it" lang="it">IT</a><a href="/es/cost-calculator/" hreflang="es" lang="es">ES</a></div>
 </header>
 <main class="page calc">
   <p class="crumbs"><a href="/de/">Home</a> / Kostenrechner</p>
@@ -82,7 +83,7 @@
       <p class="form-error" id="form-error" hidden></p>
       <div class="gate-buttons">
         <button type="submit" class="submit">Haltet mich auf dem Laufenden</button>
-        <button type="button" class="decline" id="decline">Zahlen zeigen, nicht schreiben</button>
+        <button type="button" class="decline" id="decline">Ich möchte nicht informiert werden</button>
       </div>
       <p class="consent-note">Mit dem Klick auf „Haltet mich auf dem Laufenden“ stimmen Sie zu, dass wir Ihre E-Mail-Adresse mit den Daten dieser Schätzung speichern und Ihnen dazu schreiben. Sie können sich jederzeit abmelden. Siehe <a href="/de/privacy/">Datenschutzerklärung</a>.</p>
     </form>
@@ -94,13 +95,13 @@
     <div class="table-wrap" id="result-wrap">
       <table class="clinics" id="result">
         <thead><tr>
-          <th scope="col">Stadt</th>
-          <th scope="col">Entfernung</th>
-          <th scope="col">Operation</th>
-          <th scope="col">Flüge</th>
-          <th scope="col">Hotel</th>
-          <th scope="col">Sonstiges</th>
-          <th scope="col">Gesamt</th>
+          <th scope="col" data-key="city"><button type="button" title="Sortieren nach">Stadt</button></th>
+          <th scope="col" data-key="km" aria-sort="ascending"><button type="button" title="Sortieren nach">Entfernung</button></th>
+          <th scope="col" data-key="surgery"><button type="button" title="Sortieren nach">Operation</button></th>
+          <th scope="col" data-key="flight"><button type="button" title="Sortieren nach">Flüge</button></th>
+          <th scope="col" data-key="hotel"><button type="button" title="Sortieren nach">Hotel</button></th>
+          <th scope="col" data-key="extras"><button type="button" title="Sortieren nach">Sonstiges</button></th>
+          <th scope="col" data-key="total"><button type="button" title="Sortieren nach">Gesamt</button></th>
           <th scope="col"></th>
         </tr></thead>
         <tbody></tbody>
@@ -122,7 +123,7 @@
   const TXT = {"nights": "{n} Nächte", "included": "im Paket", "flight_time": "etwa {h}", "see_clinics": "Kliniken ansehen", "sending": "Wird gespeichert...", "send": "Haltet mich auf dem Laufenden", "err_email": "Das sieht nicht nach einer E-Mail-Adresse aus.", "err_typo": "Meinten Sie {suggestion}?", "err_disposable": "Bitte nutzen Sie eine Adresse, die Sie wirklich lesen.", "err_send": "Konnte nicht gespeichert werden. Bitte erneut versuchen oder an hello@graftatlas.com schreiben.", "sent_note": "Gespeichert. Wir melden uns, sobald es etwas zu berichten gibt.", "declined_note": "In Ordnung, keine E-Mail. Die Zahlen stehen unten.", "unit_km": "km", "unit_h": "Std.", "unit_m": "Min."};
   const LANG = "de";
 </script>
-<script src="/assets/calc.js?v=d1506807"></script>
+<script src="/assets/calc.js?v=3a9b705c"></script>
 <footer class="site-footer">
   <p>GraftAtlas ist keine Klinik und gibt keine medizinischen Ratschläge. Ein Eintrag ist keine Empfehlung.</p>
   <p>© 2026 GraftAtlas · <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a> · <a href="/de/privacy/">Datenschutz</a></p>

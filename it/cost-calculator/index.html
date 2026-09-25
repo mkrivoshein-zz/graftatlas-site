@@ -11,6 +11,7 @@
 <link rel="alternate" hreflang="de" href="https://graftatlas.com/de/cost-calculator/">
 <link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/cost-calculator/">
 <link rel="alternate" hreflang="it" href="https://graftatlas.com/it/cost-calculator/">
+<link rel="alternate" hreflang="es" href="https://graftatlas.com/es/cost-calculator/">
 <link rel="alternate" hreflang="x-default" href="https://graftatlas.com/cost-calculator/">
 <meta property="og:title" content="Calcolatore dei costi del trapianto di capelli: intervento, voli e hotel | GraftAtlas">
 <meta property="og:description" content="Calcola quanto ti costerebbe davvero un trapianto di capelli all&#x27;estero: intervento, voli andata e ritorno dalla tua città e hotel. 12 città a confronto.">
@@ -41,7 +42,7 @@
 <header class="site-header">
   <a class="brand" href="/it/"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="16" cy="16" r="9" stroke-width="2.4"/><path d="M16 3v26M3 16h26" stroke-width="1.6" stroke-linecap="round"/></svg>GraftAtlas</a>
   <nav aria-label="Main"><a href="/it/istanbul/">Istanbul</a><a href="/it/miami/">Miami</a><a href="/it/bangkok/">Bangkok</a><a href="/it/budapest/">Budapest</a><a href="/it/warsaw/">Varsavia</a><a href="/it/georgia/">Georgia</a><a href="/it/tijuana/">Tijuana</a><a href="/it/mexico-city/">Città del Messico</a><a href="/it/sao-paulo/">San Paolo</a><a href="/it/seoul/">Seoul</a><a href="/it/sydney/">Sydney</a><a href="/it/delhi/">Delhi</a><a class="nav-tips" href="/it/before-you-book/" title="Prima di prenotare"><span class="full">Prima di prenotare</span><span class="short">Consigli!</span></a><a class="nav-calc" href="/it/cost-calculator/" aria-current="page" title="Calcolatore dei costi">Calcolatore</a></nav>
-  <div class="lang-switch" aria-label="Language"><a href="/cost-calculator/" hreflang="en" lang="en">EN</a><a href="/ru/cost-calculator/" hreflang="ru" lang="ru">RU</a><a href="/de/cost-calculator/" hreflang="de" lang="de">DE</a><a href="/fr/cost-calculator/" hreflang="fr" lang="fr">FR</a><a href="/it/cost-calculator/" hreflang="it" lang="it" aria-current="true">IT</a></div>
+  <div class="lang-switch" aria-label="Language"><a href="/cost-calculator/" hreflang="en" lang="en">EN</a><a href="/ru/cost-calculator/" hreflang="ru" lang="ru">RU</a><a href="/de/cost-calculator/" hreflang="de" lang="de">DE</a><a href="/fr/cost-calculator/" hreflang="fr" lang="fr">FR</a><a href="/it/cost-calculator/" hreflang="it" lang="it" aria-current="true">IT</a><a href="/es/cost-calculator/" hreflang="es" lang="es">ES</a></div>
 </header>
 <main class="page calc">
   <p class="crumbs"><a href="/it/">Home</a> / Calcolatore dei costi</p>
@@ -82,7 +83,7 @@
       <p class="form-error" id="form-error" hidden></p>
       <div class="gate-buttons">
         <button type="submit" class="submit">Tienimi aggiornato</button>
-        <button type="button" class="decline" id="decline">Mostra i numeri, non scrivermi</button>
+        <button type="button" class="decline" id="decline">Non voglio essere informato</button>
       </div>
       <p class="consent-note">Premendo «Tienimi aggiornato» acconsenti a che conserviamo il tuo indirizzo con i dettagli di questa stima e ti scriviamo al riguardo. Puoi disiscriverti in qualsiasi momento. Vedi l'<a href="/it/privacy/">informativa sulla privacy</a>.</p>
     </form>
@@ -94,13 +95,13 @@
     <div class="table-wrap" id="result-wrap">
       <table class="clinics" id="result">
         <thead><tr>
-          <th scope="col">Città</th>
-          <th scope="col">Distanza</th>
-          <th scope="col">Intervento</th>
-          <th scope="col">Voli</th>
-          <th scope="col">Hotel</th>
-          <th scope="col">Altro</th>
-          <th scope="col">Totale</th>
+          <th scope="col" data-key="city"><button type="button" title="Ordina per">Città</button></th>
+          <th scope="col" data-key="km" aria-sort="ascending"><button type="button" title="Ordina per">Distanza</button></th>
+          <th scope="col" data-key="surgery"><button type="button" title="Ordina per">Intervento</button></th>
+          <th scope="col" data-key="flight"><button type="button" title="Ordina per">Voli</button></th>
+          <th scope="col" data-key="hotel"><button type="button" title="Ordina per">Hotel</button></th>
+          <th scope="col" data-key="extras"><button type="button" title="Ordina per">Altro</button></th>
+          <th scope="col" data-key="total"><button type="button" title="Ordina per">Totale</button></th>
           <th scope="col"></th>
         </tr></thead>
         <tbody></tbody>
@@ -122,7 +123,7 @@
   const TXT = {"nights": "{n} notti", "included": "incluso nel pacchetto", "flight_time": "circa {h}", "see_clinics": "Vedi le cliniche", "sending": "Salvataggio...", "send": "Tienimi aggiornato", "err_email": "Non sembra un indirizzo e-mail.", "err_typo": "Intendevi {suggestion}?", "err_disposable": "Usa un indirizzo che leggi davvero.", "err_send": "Non è stato possibile salvare. Riprova o scrivi a hello@graftatlas.com.", "sent_note": "Salvato. Ti scriveremo quando ci sarà qualcosa da dire.", "declined_note": "Va bene, niente e-mail. I numeri sono qui sotto.", "unit_km": "km", "unit_h": "h", "unit_m": "min"};
   const LANG = "it";
 </script>
-<script src="/assets/calc.js?v=d1506807"></script>
+<script src="/assets/calc.js?v=3a9b705c"></script>
 <footer class="site-footer">
   <p>GraftAtlas non è una clinica e non fornisce consigli medici. La presenza in elenco non è una raccomandazione.</p>
   <p>© 2026 GraftAtlas · <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a> · <a href="/it/privacy/">Privacy</a></p>
