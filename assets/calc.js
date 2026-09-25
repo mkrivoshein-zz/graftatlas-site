@@ -88,22 +88,39 @@
     lead.hidden = false;
   }
 
-  countrySel.addEventListener('change', function () {
-    var list = CALC.origins[countrySel.value] || [];
-    citySel.innerHTML = '<option value="">' + citySel.options[0].textContent + '</option>' +
-      list.map(function (a) { return '<option value="' + a.code + '">' + a.city + '</option>'; }).join('');
-    citySel.disabled = !list.length;
-    state.origin = null;
-    render();
-  });
+  function countryName() {
+    var typed = countrySel.value.trim().toLowerCase();
+    var names = Object.keys(CALC.origins);
+    for (var i = 0; i < names.length; i++) {
+      if (names[i].toLowerCase() === typed) return names[i];
+    }
+    var starts = names.filter(function (n) { return n.toLowerCase().indexOf(typed) === 0; });
+    return typed && starts.length === 1 ? starts[0] : '';   // unambiguous prefix, e.g. "lithu"
+  }
 
-  citySel.addEventListener('change', function () {
-    var list = CALC.origins[countrySel.value] || [];
-    var a = list.filter(function (x) { return x.code === citySel.value; })[0];
-    state.origin = a ? [a.lat, a.lon] : null;
-    if (a && window.gtag) gtag('event', 'calc_origin', { country: countrySel.value, city: a.city, language: LANG });
+  function onCountry() {
+    var list = CALC.origins[countryName()] || [];
+    citySel.innerHTML = '<option value="">' + citySel.options[0].textContent + '</option>' +
+      list.map(function (a) { return '<option value="' + (a.code || a.city) + '">' + a.city + '</option>'; }).join('');
+    citySel.disabled = !list.length;
+    citySel.hidden = false;
+    state.origin = null;
+    if (list.length === 1) { citySel.value = list[0].code || list[0].city; onCity(); return; }
     render();
-  });
+  }
+
+  countrySel.addEventListener('input', onCountry);
+  countrySel.addEventListener('change', onCountry);
+
+  function onCity() {
+    var list = CALC.origins[countryName()] || [];
+    var a = list.filter(function (x) { return (x.code || x.city) === citySel.value; })[0];
+    state.origin = a ? [a.lat, a.lon] : null;
+    if (a && window.gtag) gtag('event', 'calc_origin', { country: countryName(), city: a.city, language: LANG });
+    render();
+  }
+
+  citySel.addEventListener('change', onCity);
 
   currencySel.addEventListener('change', render);
 
@@ -155,12 +172,12 @@
     if (!consentBox.checked) { showError(TXT.err_consent); return; }
 
     var best = state.rows[0];
-    var city = (CALC.origins[countrySel.value] || []).filter(function (x) { return x.code === citySel.value; })[0];
+    var city = (CALC.origins[countryName()] || []).filter(function (x) { return (x.code || x.city) === citySel.value; })[0];
     var payload = {
       email: emailInput.value.trim(),
-      country: countrySel.value,
+      country: countryName(),
       city: city ? city.city : '',
-      airport: citySel.value,
+      airport: city && city.code ? city.code : '',
       stage: state.stage,
       currency: currencySel.value,
       cheapest: best ? best.slug : '',
