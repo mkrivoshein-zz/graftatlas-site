@@ -229,3 +229,15 @@ a.site { word-break: break-all; }
 @media (max-width: 600px) {
   .map-list { display: block; }
 }
+
+/* Privacy policy */
+.prose { max-width: 820px; }
+.prose h2 { font-size: 20px; margin: 28px 0 8px; }
+.prose p { margin: 0 0 12px; }
+.prose .intro { font-size: 18px; color: var(--muted); }
+.cookie-reset {
+  font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+  margin-top: 16px; padding: 10px 18px; border-radius: 999px;
+  border: 1px solid var(--highlight); background: transparent; color: var(--highlight);
+}
+.cookie-reset:hover { background: var(--highlight); color: var(--on-highlight); }
