@@ -23,11 +23,9 @@
   const GA_ID = 'G-RZ8GYW8FXF';
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  let consent = null;
-  try { consent = localStorage.getItem('ga-consent'); } catch (e) {}
   gtag('consent', 'default', {
     ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
-    analytics_storage: consent === 'granted' ? 'granted' : 'denied'
+    analytics_storage: 'granted'
   });
   gtag('js', new Date());
   gtag('config', GA_ID);
@@ -47,40 +45,29 @@
 <main class="page prose">
   <p class="crumbs"><a href="/de/">Startseite</a> / Datenschutzerklärung</p>
   <h1>Datenschutzerklärung</h1>
-  <p class="hint">Zuletzt aktualisiert: 25. September 2026</p>
-  <p class="intro">Diese Seite erklärt, was wir erheben, wozu und wie Sie es löschen lassen. Kurz gesagt: Analyse nur, wenn Sie Cookies akzeptieren, Ihre E-Mail-Adresse nur, wenn Sie uns darum bitten, Ihnen etwas zu schicken, und wir geben Ihre Adresse niemals ohne Ihre Zustimmung an eine Klinik weiter.</p>
-  <section><h2>Wer wir sind</h2><p>GraftAtlas (graftatlas.com) ist ein unabhängiger Ratgeber zu Haartransplantationskliniken. Es handelt sich um ein eigenständiges Projekt; Verantwortlicher im Sinne der DSGVO ist GraftAtlas. Die gesetzlich vorgeschriebenen Angaben zum Verantwortlichen senden wir auf Anfrage zu.</p><p>Bei Fragen zu dieser Erklärung schreiben Sie an <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>.</p></section><section><h2>Was wir erheben</h2><p><strong>Analysedaten, erst nach Ihrem Klick auf Akzeptieren.</strong> Wir nutzen Google Analytics 4, um zu sehen, welche Seiten und Städte aufgerufen werden, welche Links geklickt werden und ungefähr woher Sie kommen (Land und Stadt, von Google aus Ihrer IP-Adresse abgeleitet). Bis Sie akzeptieren, läuft Google Analytics ohne Cookies und wir erhalten diese Daten nicht.</p><p><strong>Ihre Eingaben in Formularen.</strong> Wenn Sie den Kostenrechner nutzen und Ihre Adresse hinterlassen, speichern wir sie zusammen mit Abflugland und -stadt, die Zielstadt, das gewählte Haarausfall-Stadium, die berechnete Schätzung und die Sprache der Seite.</p><p><strong>Ihre E-Mails an uns.</strong> Schreiben Sie uns, speichern wir Nachricht und Adresse, um antworten zu können.</p><p><strong>Server-Logs.</strong> Die Seite liegt bei GitHub Pages, das Ihre IP-Adresse und Browserdaten verarbeitet, um die Seiten auszuliefern und Missbrauch abzuwehren. Auf diese Logs haben wir keinen Zugriff.</p></section><section><h2>Rechtsgrundlage</h2><p>Für Analyse und für jede E-Mail an Sie ist die Rechtsgrundlage Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können sie jederzeit widerrufen, und zwar so einfach, wie Sie sie erteilt haben.</p><p>Für die Beantwortung Ihrer E-Mails und den sicheren Betrieb der Seite ist die Rechtsgrundlage unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO), denen zu antworten, die uns kontaktieren.</p></section><section><h2>Wofür wir die Daten nutzen</h2><p>Wir schreiben Ihnen einmal, sobald wir geprüfte Preise für Ihre Stadt veröffentlichen. Das ist die einzige E-Mail, und sie enthält einen Abmeldelink.</p><p>Aus den Gesamtzahlen entscheiden wir, welche Städte und Kliniken wir als Nächstes recherchieren.</p><p>Wir nutzen Ihre Daten nicht für Werbung und erstellen keine Profile.</p></section><section><h2>Wer die Daten sonst sieht</h2><p>Google LLC für Google Analytics sowie für Google Sheets und Gmail, wo die Formulardaten liegen und von wo die E-Mails versendet werden.</p><p>GitHub, Inc. als Hoster der Seite sowie Squarespace Domains mit Mailgun für die Weiterleitung unserer E-Mail-Adresse.</p><p>Diese Anbieter können die Daten in den USA verarbeiten, gestützt auf die Standardvertragsklauseln der Europäischen Kommission und ihre Zertifizierung im EU-US Data Privacy Framework.</p></section><section><h2>Speicherdauer</h2><p>Formulardaten und E-Mails: bis Sie die Löschung verlangen oder 24 Monate nach Ihrem letzten Kontakt, je nachdem, was früher eintritt.</p><p>Analysedaten: 14 Monate, danach löscht Google die nutzerbezogenen Daten automatisch.</p></section><section><h2>Ihre Rechte</h2><p>Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen und Ihre Einwilligung jederzeit widerrufen. Wir antworten innerhalb eines Monats, kostenlos.</p><p>Schreiben Sie an <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>. Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich bei der Datenschutzbehörde Ihres Wohnsitzlandes beschweren.</p></section><section><h2>Cookies</h2><p>Google Analytics setzt Cookies erst nach Ihrem Klick auf Akzeptieren. Ihre Entscheidung selbst wird in Ihrem Browser gespeichert, nicht auf unserem Server, und ist das Einzige, was dort bleibt, wenn Sie ablehnen.</p><p>Wir verwenden keine Werbe-Cookies und keine Tracking-Pixel. Ihre Entscheidung können Sie jederzeit mit der Schaltfläche unten ändern.</p></section><section><h2>Kinder</h2><p>Die Seite richtet sich an Erwachsene, die eine Operation erwägen. Wir erheben wissentlich keine Daten von Personen unter 18 Jahren.</p></section><section><h2>Änderungen dieser Erklärung</h2><p>Ändert sich, was wir erheben, aktualisieren wir diese Seite und das Datum oben. Über wesentliche Änderungen informieren wir Sie per E-Mail, sofern uns Ihre Adresse vorliegt.</p></section>
-  <p><button type="button" class="cookie-reset">Cookie-Entscheidung ändern</button></p>
+  <p class="hint">Zuletzt aktualisiert: 13. Oktober 2026</p>
+  <p class="intro">Diese Seite erklärt, was wir erheben, wozu und wie Sie es löschen lassen. Kurz gesagt: Analyse bei jedem Besuch, die Sie samt Cookies im Browser blockieren können, Ihre E-Mail-Adresse nur, wenn Sie uns darum bitten, Ihnen etwas zu schicken, und wir geben Ihre Adresse niemals ohne Ihre Zustimmung an eine Klinik weiter.</p>
+  <section><h2>Wer wir sind</h2><p>GraftAtlas (graftatlas.com) ist ein unabhängiger Ratgeber zu Haartransplantationskliniken. Es handelt sich um ein eigenständiges Projekt; Verantwortlicher im Sinne der DSGVO ist GraftAtlas. Die gesetzlich vorgeschriebenen Angaben zum Verantwortlichen senden wir auf Anfrage zu.</p><p>Bei Fragen zu dieser Erklärung schreiben Sie an <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>.</p></section><section><h2>Was wir erheben</h2><p><strong>Analysedaten, bei jedem Besuch.</strong> Wir nutzen Google Analytics 4, um zu sehen, welche Seiten und Städte aufgerufen werden, welche Links geklickt werden und ungefähr woher Sie kommen (Land und Stadt, von Google aus Ihrer IP-Adresse abgeleitet). Es startet beim Laden der Seite und setzt Cookies in Ihrem Browser; Ihren Namen, Ihre E-Mail-Adresse oder Ihren genauen Standort erhalten wir so nie. Sie können das unterbinden, indem Sie Cookies oder Skripte für diese Seite im Browser blockieren oder einen Content-Blocker nutzen.</p><p><strong>Ihre Eingaben in Formularen.</strong> Wenn Sie den Kostenrechner nutzen und Ihre Adresse hinterlassen, speichern wir sie zusammen mit Abflugland und -stadt, die Zielstadt, das gewählte Haarausfall-Stadium, die berechnete Schätzung und die Sprache der Seite.</p><p><strong>Ihre E-Mails an uns.</strong> Schreiben Sie uns, speichern wir Nachricht und Adresse, um antworten zu können.</p><p><strong>Server-Logs.</strong> Die Seite liegt bei GitHub Pages, das Ihre IP-Adresse und Browserdaten verarbeitet, um die Seiten auszuliefern und Missbrauch abzuwehren. Auf diese Logs haben wir keinen Zugriff.</p></section><section><h2>Rechtsgrundlage</h2><p>Für die Analyse ist die Rechtsgrundlage unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) zu wissen, wie die Seite genutzt wird.</p><p>Für jede E-Mail an Sie ist die Rechtsgrundlage Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können sie jederzeit widerrufen, und zwar so einfach, wie Sie sie erteilt haben.</p><p>Für die Beantwortung Ihrer E-Mails und den sicheren Betrieb der Seite ist die Rechtsgrundlage unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO), denen zu antworten, die uns kontaktieren.</p></section><section><h2>Wofür wir die Daten nutzen</h2><p>Wir schreiben Ihnen einmal, sobald wir geprüfte Preise für Ihre Stadt veröffentlichen. Das ist die einzige E-Mail, und sie enthält einen Abmeldelink.</p><p>Aus den Gesamtzahlen entscheiden wir, welche Städte und Kliniken wir als Nächstes recherchieren.</p><p>Wir nutzen Ihre Daten nicht für Werbung und erstellen keine Profile.</p></section><section><h2>Wer die Daten sonst sieht</h2><p>Google LLC für Google Analytics sowie für Google Sheets und Gmail, wo die Formulardaten liegen und von wo die E-Mails versendet werden.</p><p>GitHub, Inc. als Hoster der Seite sowie Squarespace Domains mit Mailgun für die Weiterleitung unserer E-Mail-Adresse.</p><p>Diese Anbieter können die Daten in den USA verarbeiten, gestützt auf die Standardvertragsklauseln der Europäischen Kommission und ihre Zertifizierung im EU-US Data Privacy Framework.</p></section><section><h2>Speicherdauer</h2><p>Formulardaten und E-Mails: bis Sie die Löschung verlangen oder 24 Monate nach Ihrem letzten Kontakt, je nachdem, was früher eintritt.</p><p>Analysedaten: 14 Monate, danach löscht Google die nutzerbezogenen Daten automatisch.</p></section><section><h2>Ihre Rechte</h2><p>Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit verlangen und Ihre Einwilligung jederzeit widerrufen. Wir antworten innerhalb eines Monats, kostenlos.</p><p>Schreiben Sie an <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>. Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich bei der Datenschutzbehörde Ihres Wohnsitzlandes beschweren.</p></section><section><h2>Cookies</h2><p>Google Analytics setzt seine Cookies beim Öffnen einer Seite; der Hinweis unten sagt Ihnen das, und ihn zu schließen blendet nur den Hinweis aus. Dass Sie ihn geschlossen haben, ist das Einzige, was wir selbst in Ihrem Browser speichern.</p><p>Wir verwenden keine Werbe-Cookies und keine Tracking-Pixel. Wenn Sie die Analyse-Cookies ablehnen möchten, blockieren Sie Cookies oder Skripte für diese Seite im Browser oder nutzen Sie einen Content-Blocker; die Seite funktioniert genauso.</p></section><section><h2>Kinder</h2><p>Die Seite richtet sich an Erwachsene, die eine Operation erwägen. Wir erheben wissentlich keine Daten von Personen unter 18 Jahren.</p></section><section><h2>Änderungen dieser Erklärung</h2><p>Ändert sich, was wir erheben, aktualisieren wir diese Seite und das Datum oben. Über wesentliche Änderungen informieren wir Sie per E-Mail, sofern uns Ihre Adresse vorliegt.</p></section>
 </main>
-<script>
-  document.querySelector('.cookie-reset').addEventListener('click', function () {
-    try { localStorage.removeItem('ga-consent'); } catch (e) {}
-    gtag('consent', 'update', { analytics_storage: 'denied' });
-    document.getElementById('consent').hidden = false;
-  });
-</script>
 <footer class="site-footer">
   <p>GraftAtlas ist keine Klinik und gibt keine medizinischen Ratschläge. Ein Eintrag ist keine Empfehlung.</p>
   <p>© 2026 GraftAtlas · <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a> · <a href="/de/privacy/">Datenschutz</a></p>
 </footer>
 <div class="consent" id="consent" hidden>
-  <p>Wir verwenden Google-Analytics-Cookies, um zu verstehen, wie Besucher diese Website nutzen. Keine Werbung, kein Datenverkauf.</p>
+  <p>Wir verwenden Google-Analytics-Cookies, um zu verstehen, wie Besucher diese Website nutzen. Keine Werbung, kein Datenverkauf. <a href="/de/privacy/">Datenschutz</a></p>
   <div>
-    <button type="button" data-choice="denied">Ablehnen</button>
-    <button type="button" class="accept" data-choice="granted">Akzeptieren</button>
+    <button type="button" class="accept" data-dismiss="1">OK</button>
   </div>
 </div>
 <script>
   (function () {
     const box = document.getElementById('consent');
-    let saved = null;
-    try { saved = localStorage.getItem('ga-consent'); } catch (e) {}
-    if (!saved) box.hidden = false;
+    let seen = null;
+    try { seen = localStorage.getItem('ga-notice'); } catch (e) {}
+    if (!seen) box.hidden = false;
     box.addEventListener('click', function (e) {
-      const choice = e.target.dataset && e.target.dataset.choice;
-      if (!choice) return;
-      try { localStorage.setItem('ga-consent', choice); } catch (e) {}
-      gtag('consent', 'update', { analytics_storage: choice });
+      if (!(e.target.dataset && e.target.dataset.dismiss)) return;
+      try { localStorage.setItem('ga-notice', '1'); } catch (e) {}
       box.hidden = true;
     });
   })();

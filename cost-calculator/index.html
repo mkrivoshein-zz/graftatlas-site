@@ -23,11 +23,9 @@
   const GA_ID = 'G-RZ8GYW8FXF';
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  let consent = null;
-  try { consent = localStorage.getItem('ga-consent'); } catch (e) {}
   gtag('consent', 'default', {
     ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
-    analytics_storage: consent === 'granted' ? 'granted' : 'denied'
+    analytics_storage: 'granted'
   });
   gtag('js', new Date());
   gtag('config', GA_ID);
@@ -129,23 +127,20 @@
   <p>© 2026 GraftAtlas · <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a> · <a href="/privacy/">Privacy</a></p>
 </footer>
 <div class="consent" id="consent" hidden>
-  <p>We use Google Analytics cookies to understand how visitors use this site. No ads, no data sold.</p>
+  <p>We use Google Analytics cookies to understand how visitors use this site. No ads, no data sold. <a href="/privacy/">Privacy</a></p>
   <div>
-    <button type="button" data-choice="denied">Decline</button>
-    <button type="button" class="accept" data-choice="granted">Accept</button>
+    <button type="button" class="accept" data-dismiss="1">OK</button>
   </div>
 </div>
 <script>
   (function () {
     const box = document.getElementById('consent');
-    let saved = null;
-    try { saved = localStorage.getItem('ga-consent'); } catch (e) {}
-    if (!saved) box.hidden = false;
+    let seen = null;
+    try { seen = localStorage.getItem('ga-notice'); } catch (e) {}
+    if (!seen) box.hidden = false;
     box.addEventListener('click', function (e) {
-      const choice = e.target.dataset && e.target.dataset.choice;
-      if (!choice) return;
-      try { localStorage.setItem('ga-consent', choice); } catch (e) {}
-      gtag('consent', 'update', { analytics_storage: choice });
+      if (!(e.target.dataset && e.target.dataset.dismiss)) return;
+      try { localStorage.setItem('ga-notice', '1'); } catch (e) {}
       box.hidden = true;
     });
   })();

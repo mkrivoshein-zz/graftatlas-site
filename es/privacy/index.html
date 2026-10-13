@@ -23,11 +23,9 @@
   const GA_ID = 'G-RZ8GYW8FXF';
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  let consent = null;
-  try { consent = localStorage.getItem('ga-consent'); } catch (e) {}
   gtag('consent', 'default', {
     ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
-    analytics_storage: consent === 'granted' ? 'granted' : 'denied'
+    analytics_storage: 'granted'
   });
   gtag('js', new Date());
   gtag('config', GA_ID);
@@ -47,40 +45,29 @@
 <main class="page prose">
   <p class="crumbs"><a href="/es/">Inicio</a> / Política de privacidad</p>
   <h1>Política de privacidad</h1>
-  <p class="hint">Última actualización: 25 de septiembre de 2026</p>
-  <p class="intro">Esta página explica qué recogemos, para qué y cómo pedir que se borre. En resumen: estadísticas solo si aceptas las cookies, tu correo solo si nos pides que te escribamos, y nunca damos tu dirección a una clínica sin preguntarte antes.</p>
-  <section><h2>Quiénes somos</h2><p>GraftAtlas (graftatlas.com) es una guía independiente de clínicas de trasplante capilar. Es un proyecto independiente y GraftAtlas es el responsable del tratamiento de los datos. Escríbenos si necesitas los datos del responsable que exige la ley.</p><p>Para cualquier cosa de esta política, escribe a <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>.</p></section><section><h2>Qué recogemos</h2><p><strong>Estadísticas, solo después de que pulses Aceptar.</strong> Usamos Google Analytics 4 para ver qué páginas y ciudades se consultan, en qué enlaces se hace clic y aproximadamente desde dónde entras (país y ciudad, que Google deduce de tu dirección IP). Hasta que aceptas, Google Analytics funciona sin cookies y no recibimos esos datos.</p><p><strong>Lo que escribes en un formulario.</strong> Cuando usas la calculadora de costes y dejas tu dirección, la guardamos junto con el país y la ciudad de salida, la ciudad de destino, el estadio de caída que has elegido, la estimación calculada y el idioma de la página.</p><p><strong>Los correos que nos envías.</strong> Guardamos tu mensaje y tu dirección para poder responderte.</p><p><strong>Registros del servidor.</strong> El sitio está alojado en GitHub Pages, que trata tu dirección IP y los datos del navegador para servir las páginas y evitar abusos. Nosotros no tenemos acceso a esos registros.</p></section><section><h2>Con qué base legal</h2><p>Para las estadísticas y para cualquier correo que te enviemos, la base legal es tu consentimiento (art. 6.1.a del RGPD). Puedes retirarlo en cualquier momento, con la misma facilidad con la que lo diste.</p><p>Para responder a tus correos y mantener el sitio en marcha con seguridad, la base legal es nuestro interés legítimo (art. 6.1.f del RGPD) en responder a quien nos escribe.</p></section><section><h2>Qué hacemos con ellos</h2><p>Te escribimos una sola vez, cuando publiquemos precios verificados de la ciudad que estabas mirando. Ese es el único correo que recibirás y lleva un enlace para darte de baja.</p><p>Usamos las cifras agregadas para decidir qué ciudades y clínicas investigar después.</p><p>No usamos tus datos para publicidad ni creamos perfiles tuyos.</p></section><section><h2>Quién más los ve</h2><p>Google LLC, por Google Analytics y por Google Sheets, donde se guardan los datos de los formularios.</p><p>GitHub, Inc., que aloja el sitio, y Squarespace Domains con Mailgun, que reenvían el correo dirigido a nuestra dirección.</p><p>Estos proveedores pueden tratar los datos en Estados Unidos, al amparo de las cláusulas contractuales tipo de la Comisión Europea y de su certificación en el EU-US Data Privacy Framework.</p></section><section><h2>Cuánto tiempo los guardamos</h2><p>Datos de formularios y correos: hasta que pidas que los borremos o 24 meses después de tu último contacto, lo que ocurra antes.</p><p>Estadísticas: 14 meses, tras los cuales Google borra automáticamente los datos a nivel de usuario.</p></section><section><h2>Tus derechos</h2><p>Puedes pedirnos una copia de tus datos, su rectificación, su supresión, la limitación u oposición a su uso, o recibirlos en un formato portable. Puedes retirar tu consentimiento en cualquier momento. Respondemos en un mes y no te cuesta nada.</p><p>Escribe a <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>. Si nuestra respuesta no te satisface, puedes reclamar ante la autoridad de protección de datos del país donde vives.</p></section><section><h2>Cookies</h2><p>Google Analytics solo instala cookies después de que pulses Aceptar. Tu decisión se guarda en tu navegador, no en nuestro servidor, y es lo único que queda allí si la rechazas.</p><p>No usamos cookies publicitarias ni píxeles de seguimiento. Puedes cambiar de opinión en cualquier momento con el botón de abajo.</p></section><section><h2>Menores</h2><p>El sitio está dirigido a adultos que se plantean una cirugía. No recogemos conscientemente datos de menores de 18 años.</p></section><section><h2>Cambios en esta política</h2><p>Si cambia lo que recogemos, actualizamos esta página y la fecha de arriba. Si el cambio es importante y tenemos tu correo, te avisaremos por correo electrónico.</p></section>
-  <p><button type="button" class="cookie-reset">Cambiar tu decisión sobre las cookies</button></p>
+  <p class="hint">Última actualización: 13 de octubre de 2026</p>
+  <p class="intro">Esta página explica qué recogemos, para qué y cómo pedir que se borre. En resumen: estadísticas en cada visita, que puedes bloquear en tu navegador junto con las cookies, tu correo solo si nos pides que te escribamos, y nunca damos tu dirección a una clínica sin preguntarte antes.</p>
+  <section><h2>Quiénes somos</h2><p>GraftAtlas (graftatlas.com) es una guía independiente de clínicas de trasplante capilar. Es un proyecto independiente y GraftAtlas es el responsable del tratamiento de los datos. Escríbenos si necesitas los datos del responsable que exige la ley.</p><p>Para cualquier cosa de esta política, escribe a <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>.</p></section><section><h2>Qué recogemos</h2><p><strong>Estadísticas, en cada visita.</strong> Usamos Google Analytics 4 para ver qué páginas y ciudades se consultan, en qué enlaces se hace clic y aproximadamente desde dónde entras (país y ciudad, que Google deduce de tu dirección IP). Se activa al cargar la página e instala cookies en tu navegador; así nunca recibimos tu nombre, tu correo ni tu ubicación exacta. Puedes impedirlo bloqueando las cookies o los scripts de este sitio en tu navegador, o con cualquier bloqueador de contenido.</p><p><strong>Lo que escribes en un formulario.</strong> Cuando usas la calculadora de costes y dejas tu dirección, la guardamos junto con el país y la ciudad de salida, la ciudad de destino, el estadio de caída que has elegido, la estimación calculada y el idioma de la página.</p><p><strong>Los correos que nos envías.</strong> Guardamos tu mensaje y tu dirección para poder responderte.</p><p><strong>Registros del servidor.</strong> El sitio está alojado en GitHub Pages, que trata tu dirección IP y los datos del navegador para servir las páginas y evitar abusos. Nosotros no tenemos acceso a esos registros.</p></section><section><h2>Con qué base legal</h2><p>Para las estadísticas, la base legal es nuestro interés legítimo (art. 6.1.f del RGPD) en saber cómo se usa el sitio.</p><p>Para cualquier correo que te enviemos, la base legal es tu consentimiento (art. 6.1.a del RGPD). Puedes retirarlo en cualquier momento, con la misma facilidad con la que lo diste.</p><p>Para responder a tus correos y mantener el sitio en marcha con seguridad, la base legal es nuestro interés legítimo (art. 6.1.f del RGPD) en responder a quien nos escribe.</p></section><section><h2>Qué hacemos con ellos</h2><p>Te escribimos una sola vez, cuando publiquemos precios verificados de la ciudad que estabas mirando. Ese es el único correo que recibirás y lleva un enlace para darte de baja.</p><p>Usamos las cifras agregadas para decidir qué ciudades y clínicas investigar después.</p><p>No usamos tus datos para publicidad ni creamos perfiles tuyos.</p></section><section><h2>Quién más los ve</h2><p>Google LLC, por Google Analytics y por Google Sheets, donde se guardan los datos de los formularios.</p><p>GitHub, Inc., que aloja el sitio, y Squarespace Domains con Mailgun, que reenvían el correo dirigido a nuestra dirección.</p><p>Estos proveedores pueden tratar los datos en Estados Unidos, al amparo de las cláusulas contractuales tipo de la Comisión Europea y de su certificación en el EU-US Data Privacy Framework.</p></section><section><h2>Cuánto tiempo los guardamos</h2><p>Datos de formularios y correos: hasta que pidas que los borremos o 24 meses después de tu último contacto, lo que ocurra antes.</p><p>Estadísticas: 14 meses, tras los cuales Google borra automáticamente los datos a nivel de usuario.</p></section><section><h2>Tus derechos</h2><p>Puedes pedirnos una copia de tus datos, su rectificación, su supresión, la limitación u oposición a su uso, o recibirlos en un formato portable. Puedes retirar tu consentimiento en cualquier momento. Respondemos en un mes y no te cuesta nada.</p><p>Escribe a <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a>. Si nuestra respuesta no te satisface, puedes reclamar ante la autoridad de protección de datos del país donde vives.</p></section><section><h2>Cookies</h2><p>Google Analytics instala sus cookies al abrir una página; el aviso de abajo te lo dice y cerrarlo solo lo oculta. Que lo hayas cerrado es lo único que guardamos nosotros en tu navegador.</p><p>No usamos cookies publicitarias ni píxeles de seguimiento. Para rechazar las cookies de estadísticas, bloquea las cookies o los scripts de este sitio en tu navegador, o usa un bloqueador de contenido: el sitio funciona igual.</p></section><section><h2>Menores</h2><p>El sitio está dirigido a adultos que se plantean una cirugía. No recogemos conscientemente datos de menores de 18 años.</p></section><section><h2>Cambios en esta política</h2><p>Si cambia lo que recogemos, actualizamos esta página y la fecha de arriba. Si el cambio es importante y tenemos tu correo, te avisaremos por correo electrónico.</p></section>
 </main>
-<script>
-  document.querySelector('.cookie-reset').addEventListener('click', function () {
-    try { localStorage.removeItem('ga-consent'); } catch (e) {}
-    gtag('consent', 'update', { analytics_storage: 'denied' });
-    document.getElementById('consent').hidden = false;
-  });
-</script>
 <footer class="site-footer">
   <p>GraftAtlas no es una clínica y no da consejos médicos. Aparecer en la lista no es una recomendación.</p>
   <p>© 2026 GraftAtlas · <a href="mailto:hello@graftatlas.com">hello@graftatlas.com</a> · <a href="/es/privacy/">Privacidad</a></p>
 </footer>
 <div class="consent" id="consent" hidden>
-  <p>Usamos cookies de Google Analytics para entender cómo se usa este sitio. Sin publicidad y sin vender datos.</p>
+  <p>Usamos cookies de Google Analytics para entender cómo se usa este sitio. Sin publicidad y sin vender datos. <a href="/es/privacy/">Privacidad</a></p>
   <div>
-    <button type="button" data-choice="denied">Rechazar</button>
-    <button type="button" class="accept" data-choice="granted">Aceptar</button>
+    <button type="button" class="accept" data-dismiss="1">OK</button>
   </div>
 </div>
 <script>
   (function () {
     const box = document.getElementById('consent');
-    let saved = null;
-    try { saved = localStorage.getItem('ga-consent'); } catch (e) {}
-    if (!saved) box.hidden = false;
+    let seen = null;
+    try { seen = localStorage.getItem('ga-notice'); } catch (e) {}
+    if (!seen) box.hidden = false;
     box.addEventListener('click', function (e) {
-      const choice = e.target.dataset && e.target.dataset.choice;
-      if (!choice) return;
-      try { localStorage.setItem('ga-consent', choice); } catch (e) {}
-      gtag('consent', 'update', { analytics_storage: choice });
+      if (!(e.target.dataset && e.target.dataset.dismiss)) return;
+      try { localStorage.setItem('ga-notice', '1'); } catch (e) {}
       box.hidden = true;
     });
   })();
