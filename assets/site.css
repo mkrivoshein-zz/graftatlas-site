@@ -338,3 +338,14 @@ a.site { word-break: break-all; }
   font-size: 11px; font-weight: 700; letter-spacing: .04em; vertical-align: 2px;
   border: 1px solid var(--on-highlight); opacity: .85;
 }
+
+/* "Checked by hand" line: prominent above the city list, quiet in the footer */
+.checked-note {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin: 0 0 24px; padding: 12px 16px; font-size: 15px;
+  background: var(--highlight-soft); border-radius: 6px;
+}
+.checked-note::before {
+  content: "✓"; flex: none; font-weight: 700; color: var(--highlight);
+}
+.site-footer .checked { margin: 0 0 6px; }
