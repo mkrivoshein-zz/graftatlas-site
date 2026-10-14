@@ -991,6 +991,72 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/privacy/"/>
   </url>
   <url>
+    <loc>https://graftatlas.com/about/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graftatlas.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/about/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/ru/about/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graftatlas.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/about/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/de/about/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graftatlas.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/about/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/fr/about/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graftatlas.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/about/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/it/about/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graftatlas.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/about/"/>
+  </url>
+  <url>
+    <loc>https://graftatlas.com/es/about/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://graftatlas.com/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://graftatlas.com/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://graftatlas.com/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://graftatlas.com/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://graftatlas.com/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/about/"/>
+  </url>
+  <url>
     <loc>https://graftatlas.com/cost-calculator/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/cost-calculator/"/>
