@@ -349,3 +349,18 @@ a.site { word-break: break-all; }
   content: "✓"; flex: none; font-weight: 700; color: var(--highlight);
 }
 .site-footer .checked { margin: 0 0 6px; }
+
+/* Footer: hand the reader's question to an AI assistant */
+.ask-ai {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px;
+  margin: 0 0 18px; padding: 16px 20px; background: var(--soft-panel, var(--accent-soft)); border-radius: 8px;
+}
+.ask-ai p { margin: 0; font-size: 15px; }
+.ask-ai p span { color: var(--muted); }
+.ask-ai-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.ask-ai-links a {
+  text-decoration: none; font-size: 14px; font-weight: 600; white-space: nowrap;
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text);
+}
+.ask-ai-links a:hover { border-color: var(--highlight); color: var(--highlight); }
