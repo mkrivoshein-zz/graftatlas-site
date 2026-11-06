@@ -373,3 +373,32 @@ a.site { word-break: break-all; }
   display: grid; place-items: center; font-size: 12px; font-weight: 700;
   color: var(--muted); background: var(--accent-soft);
 }
+
+/* Clinic pages */
+a.clinic-link { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+a.clinic-link:hover { text-decoration-color: currentColor; }
+.clinic-page .intro .type { vertical-align: 1px; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 20px 0 0; max-width: 760px; }
+.facts dt { color: var(--muted); font-size: 15px; }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+.facts .hint { font-size: 13px; }
+.age p, .next p { max-width: 760px; }
+.news-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; max-width: 820px; }
+.news-list li { display: grid; grid-template-columns: 150px 120px 1fr; gap: 4px 14px; align-items: baseline;
+                padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.news-list time { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.news-list p { margin: 0; }
+.news-kind { justify-self: start; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+             background: var(--accent-soft); color: var(--text); }
+.news-press, .news-sponsored { background: #fdf0d8; color: #7a4b00; }
+.news-media { background: #dff3e6; color: #1f5a35; }
+@media (prefers-color-scheme: dark) {
+  .news-press, .news-sponsored { background: #3a2d12; color: #f3cf8a; }
+  .news-media { background: #173a26; color: #a6e3bd; }
+}
+@media (max-width: 640px) {
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 10px; }
+  .news-list li { grid-template-columns: auto 1fr; }
+  .news-list p { grid-column: 1 / -1; }
+}
