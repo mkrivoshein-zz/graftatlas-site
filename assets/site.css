@@ -364,3 +364,12 @@ a.site { word-break: break-all; }
   background: var(--surface); color: var(--text);
 }
 .ask-ai-links a:hover { border-color: var(--highlight); color: var(--highlight); }
+
+/* Clinic row: site icon next to the name */
+.clinic { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; }
+.clinic-text { display: block; }
+.logo { width: 22px; height: 22px; border-radius: 4px; margin-top: 2px; object-fit: contain; background: var(--bg); }
+.logo-blank {
+  display: grid; place-items: center; font-size: 12px; font-weight: 700;
+  color: var(--muted); background: var(--accent-soft);
+}
