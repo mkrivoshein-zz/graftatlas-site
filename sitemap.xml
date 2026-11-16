@@ -3084,4 +3084,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/warsaw/wavemedica/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/warsaw/wavemedica/"/>
   </url>
+  <url>
+    <loc>https://graftatlas.com/research/google-ratings/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://graftatlas.com/research/google-ratings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://graftatlas.com/research/google-ratings/"/>
+  </url>
 </urlset>

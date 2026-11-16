@@ -408,3 +408,10 @@ table.clinics.facial-table td:nth-child(1) { color: var(--text); white-space: no
 table.clinics.facial-table td:nth-child(1) a { white-space: normal; }
 table.clinics.facial-table td:nth-child(2) { min-width: 0; }
 table.clinics.facial-table td:nth-child(n+2), table.clinics.facial-table th:nth-child(n+2) { white-space: nowrap; }
+.research .chart { width: 100%; height: auto; max-width: 560px; margin: 8px 0 4px; }
+.research .chart-label, .research .chart-value { fill: var(--text); font-size: 15px; }
+.research .chart-value { fill: var(--muted); }
+.research .chart-bar { fill: var(--highlight); }
+.research .data-table { border-collapse: collapse; width: 100%; font-size: 15px; font-variant-numeric: tabular-nums; }
+.research .data-table th, .research .data-table td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.research .data-table th { border-bottom-color: var(--border); }
