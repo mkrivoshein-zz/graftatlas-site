@@ -402,3 +402,9 @@ a.clinic-link:hover { text-decoration-color: currentColor; }
   .news-list li { grid-template-columns: auto 1fr; }
   .news-list p { grid-column: 1 / -1; }
 }
+.facial { margin-top: 32px; }
+table.clinics.facial-table { min-width: 0; }
+table.clinics.facial-table td:nth-child(1) { color: var(--text); white-space: normal; min-width: 0; }
+table.clinics.facial-table td:nth-child(1) a { white-space: normal; }
+table.clinics.facial-table td:nth-child(2) { min-width: 0; }
+table.clinics.facial-table td:nth-child(n+2), table.clinics.facial-table th:nth-child(n+2) { white-space: nowrap; }
