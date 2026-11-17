@@ -427,16 +427,10 @@ table.clinics.facial-table td:nth-child(n+2), table.clinics.facial-table th:nth-
 .research .tips p { margin: 5px 0 0; color: var(--muted); }
 .tip-tag { display: inline-block; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); background: var(--accent-soft); border-radius: 100px; padding: 2px 9px; white-space: nowrap; }
 
-/* Recovery timeline: drawn stage panels (no photographs anywhere on this site) */
+/* Recovery timeline: rendered stage panels (illustrations, not photographs) */
 .stages { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 16px 0 10px; }
 .stage { margin: 0; }
-.stage-art { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px; }
+.stage-art { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; line-height: 0; }
 .stage-art svg { display: block; width: 100%; height: auto; }
 .stage figcaption { margin: 7px 2px 0; font-size: 13px; line-height: 1.45; color: var(--muted); }
 .stage figcaption strong { display: block; color: var(--text); font-size: 14px; }
-.art-skin { fill: var(--accent-soft); }
-.art-red { fill: #c0392b; }
-.art-line { fill: none; stroke: var(--border); stroke-width: 1.1; stroke-dasharray: 3 3; }
-.art-hair { fill: none; stroke: var(--text); stroke-width: 1.6; stroke-linecap: round; }
-.art-graft { fill: #c0392b; opacity: .5; }
-.art-brow { fill: none; stroke: var(--text); stroke-width: 3; stroke-linecap: round; opacity: .45; }
