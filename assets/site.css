@@ -421,7 +421,7 @@ table.clinics.facial-table td:nth-child(n+2), table.clinics.facial-table th:nth-
 .research figure img { display: block; width: 100%; height: auto; border-radius: 8px; }
 .research figcaption { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
 .research .data-table.log td:last-child { white-space: normal; }
-.research .data-table.log td:first-child { width: 86px; color: var(--muted); }
+.research .data-table.log td:first-child { width: 170px; color: var(--muted); }
 .research .tips { margin: 14px 0 0; padding-left: 22px; }
 .research .tips li { margin: 0 0 18px; }
 .research .tips p { margin: 5px 0 0; color: var(--muted); }
